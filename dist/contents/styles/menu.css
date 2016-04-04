@@ -1,0 +1,171 @@
+.border-box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    font-size: 14px;
+}
+body > span,
+body > h1 {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+span {
+    color: #888888;
+}
+button {
+    width: auto;
+    padding: 7px 22px;
+}
+menu {
+    display: block;
+}
+menu > div {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-transition: -webkit-transform ease 250ms;
+    -moz-transition: -webkit-transform ease 250ms;
+    -ms-transition: -webkit-transform ease 250ms;
+    -o-transition: -webkit-transform ease 250ms;
+    transition: -webkit-transform ease 250ms;
+    -webkit-transition: transform ease 250ms;
+    -moz-transition: transform ease 250ms;
+    -ms-transition: transform ease 250ms;
+    -o-transition: transform ease 250ms;
+    transition: transform ease 250ms;
+}
+menu > div.left {
+    background: #273D7A;
+    left: -250px;
+    /*margin-top: 60px;*/
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+    background: rgba(14, 13, 13, 0.85);
+}
+menu > div.show.left {
+    transform: translate3d(250px, 0, 0);
+    -ms-transform: translate3d(250px, 0, 0);
+    -webkit-transform: translate3d(250px, 0, 0);
+    -o-transform: translate3d(250px, 0, 0);
+    -moz-transform: translate3d(250px, 0, 0);
+}
+menu > div.right {
+    background: #6B1919;
+    right: -250px;
+    /*margin-top: 60px;*/
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+    background: rgba(14, 13, 13, 0.85);
+}
+menu > div.show.right {
+    transform: translate3d(-250px, 0, 0);
+    -ms-transform: translate3d(-250px, 0, 0);
+    -webkit-transform: translate3d(-250px, 0, 0);
+    -o-transform: translate3d(-250px, 0, 0);
+    -moz-transform: translate3d(-250px, 0, 0);
+}
+menu > div > menu-item {
+    display: block;
+}
+menu > div > menu-item > div {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 10px 15px;
+    border-bottom: solid 1px #555;
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #B0B0B0;
+}
+menu > div > menu-item > div:hover {
+    color: #F0F0F0;
+}
+menu > div > menu-item > div > span {
+    float: left;
+    color: inherit;
+}
+
+.leftCategory {
+    background-color: #A75B5B;
+    text-transform: uppercase;
+}
+
+.headerIG{
+    display: block;
+    width: 100%;
+    height: 60px;
+    top:0;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+    background: #3a5795;
+}
+.headerIG > .left {
+    display: block;
+    float: left;
+    width: 87%;
+    margin-top: 5px;
+}
+.headerIG > .left > a {
+    background-color: transparent;
+    background-image: url('') no-repeat;
+    background-size: 20px 20px;
+}
+
+.headerIG > .rightMenu {
+    display: block;
+    float: right;
+    width:13%;
+    margin-top: 15px;
+}
+.headerIG > .rightMenu > a {
+    background-color: transparent;
+    background-image: url("") no-repeat;
+    background-size: 20px 20px;
+}
+
+.logoRoundImage {
+    -webkit-background-size: 32px 32px;
+    background-size: 32px 32px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: block;
+    margin: -1px;
+    overflow: hidden;
+    position: relative;
+    height: 32px;
+    width: 32px;
+    background-color: lightgray;
+    cursor: pointer;
+    /*background-image: url(../../contents/images/user.jpg);*/
+}
+.hamburgerSign{
+    height: 40px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+.welcomeMenu {
+    margin-top: 60px;
+}
+.welcomeUser {
+    height: 150px;
+    text-align: center;
+    margin-top: 60px;
+}
+.welcomeUser > img {
+    height: 100px;
+    width:100px;
+    border-radius: 5px;
+}
+.welcomeUser > div {
+    color: white;
+    font-size: medium;
+    padding-top: 10px;
+    text-transform: uppercase;
+}

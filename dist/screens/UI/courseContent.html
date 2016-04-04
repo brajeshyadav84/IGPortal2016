@@ -1,0 +1,50 @@
+<div ng-include="'screens/component/Carousel.html'"></div>
+
+<div class="IG_OuterContentLayout">
+	<div id="TableOfContent">
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+			text goes here<img src="{{CourseImage}}" />
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<p>
+				text goes here {{Description}}
+			</p>
+			<p ng-repeat="(index, Outline) in OutlineList">
+				<i class="glyphicon glyphicon-bookmark"></i>  {{Outline.label}}
+			</p>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="background-color: lightyellow;">
+			<p><strong>RECENT ARTICLES</strong></p>
+			<div style="border-top: 1px solid #F0F0F0;padding-top: 5px;">
+				<p>How to Fetch Google Analytics Statistics and Display it in Your C# Application</p>
+				By Michal Habalcik in | Dec 22, 2014
+			</div>
+			<div style="border-top: 1px solid #F0F0F0;padding-top: 5px;">
+				<p>How to Fetch Google Analytics Statistics and Display it in Your C# Application</p>
+				By Michal Habalcik in | Dec 22, 2014
+			</div>
+		</div>
+	</div>
+
+	<div id="IGDescription">
+		<p>
+			The goal of Interviewgully is to provide you a platform where you can enhance your knowledge and skills via our articles and video
+			tutorials. It also provide you a platform where you can interact with our experts with your queries and  our expert will help you to resolve your queries via email. and if required than skype chat as well.
+		</p>
+		<p>
+			In coming days, more different technologies will be added.
+		</p>
+		<p>
+			If you have a good command on any technologies and you want to have it posted in this portal, let us know as well.
+		</p>
+		<p>
+			Need your suggestions, In order to improve our articles and video tutorials and make it more approachable.
+		</p>
+
+	</div>
+
+	<div id="FeaturedCards">
+
+	</div>
+
+</div>

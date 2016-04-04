@@ -1,0 +1,18 @@
+<div class="loginOuter">
+	<div class="loginLayout">
+		<div ng-controller="LinkedINCtrl">
+			<a href="" class="socialBtn" ng-click="onLinkedInLogin()">
+				<i class="fa fa-linkedin"></i>
+
+				<div>Login with LinkedIn</div>
+			</a>
+		</div>
+		<div ng-controller="FBCtrl">
+			<a href="" class="socialBtn" ng-click="login()" ng-disabled="loginStatus.status == 'connected'">
+				<i class="fa fa-linkedin"></i>
+
+				<div>Login with Facebook</div>
+			</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<div ng-controller="CarouselCtrl" class="IG_Carousel">
+	<carousel3d
+			ng-model="slides2"
+			options="options2"
+			on-selected-click="selectedClick(index)"
+			on-slide-change="slideChanged(index)"
+			on-last-slide="lastSlide(index)"
+			on-before-change="beforeChange(index)">
+
+		<carousel3d-slide ng-repeat="slide in slides2 track by $index" ng-style="{'background': slide.bg}">
+			<div style="padding: 20px; color: grey">
+				<h2>Slide</h2>
+				<p ng-bind="slide.caption"></p>
+				<p ng-bind="slide.caption"></p>
+			</div>
+		</carousel3d-slide>
+
+</carousel3d>
+</div>

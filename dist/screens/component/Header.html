@@ -1,0 +1,52 @@
+<div ng-controller="MenuCtrl">
+    <div class="headerIG">
+	    <div class="left">
+		    <!--<a ng-click="showLeft($event)" class="hembergerMenu">testing</a>-->
+		    <img src="contents/images/hamburger.png" class="hamburgerSign" ng-click="showLeft($event)"/>
+		    <img src="contents/images/logo.png" class="IG_Logo"/>
+	    </div>
+	    <div class="rightMenu">
+		    <div ng-click="setRedirect('Login')" ng-hide="showRightMenu()" class="signIN">
+				Sign In
+		    </div>
+		    <span ng-click="showRight($event)" class="logoRoundImage" ng-show="showRightMenu()">
+			    <img src={{UserDetails.picture}}>
+		    </span>
+	    </div>
+    </div>
+
+    <menu visible="leftVisible" alignment="left">
+	    <div class="welcomeMenu">
+
+	    </div>
+	    <menu-item hash="first-page">Home</menu-item>
+	    <menu-item hash="second-page">About Team</menu-item>
+	    <menu-item hash="third-page">Contact Us</menu-item>
+	    <menu-item hash="Fourth-page" classname="leftCategory">Professional Services</menu-item>
+	    <menu-item hash="Fifth-page">HR Prepration</menu-item>
+	    <menu-item hash="Fifth-page">Resume Builder</menu-item>
+	    <menu-item hash="Fifth-page">College Project List</menu-item>
+	    <menu-item hash="Fifth-page">Jobs / Walkin's</menu-item>
+	    <menu-item hash="Fifth-page">Online Training</menu-item>
+	    <menu-item hash="Fifth-page">Online Events</menu-item>
+	    <menu-item hash="Fourth-page" classname="leftCategory">Community</menu-item>
+	    <menu-item hash="Fifth-page">Facebook</menu-item>
+	    <menu-item hash="Fifth-page">LinkedIn</menu-item>
+	    <menu-item hash="Fifth-page">YouTube</menu-item>
+    </menu>
+
+    <menu visible="rightVisible" alignment="right">
+	    <div class="welcomeUser">
+		    <img src={{UserDetails.cover}} alt="User Name"/>
+		    <div>
+			    {{UserDetails.name}}
+		    </div>
+	    </div>
+	    <menu-item hash="first-page">My Account</menu-item>
+	    <menu-item hash="second-page">Change Password</menu-item>
+	    <menu-item hash="third-page">Share your Feedback</menu-item>
+	    <menu-item hash="Fourth-page">Raise Your Query</menu-item>
+	    <menu-item hash="Fourth-page" ng-click="shareOnFB()">Share with facebook</menu-item>
+	    <menu-item hash="logout" ng-click="logout()">Logout</menu-item>
+    </menu>
+</div>

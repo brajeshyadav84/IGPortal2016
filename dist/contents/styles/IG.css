@@ -1,0 +1,15 @@
+.IG_Carousel {
+	margin-top: -20px;
+	padding: 20px;
+	background-color: lightgray;
+}
+
+.IG_Logo{
+	height: 40px;
+	width: 150px;
+	padding-top: 10px;
+}
+
+.IG_OuterContentLayout{
+	padding: 10px;
+}
