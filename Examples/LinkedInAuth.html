@@ -1,0 +1,61 @@
+<!--https://github.com/eucuepo/angular-linkedin/tree/master/angular-linkedin/js-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="aa" xmlns:ng="http://angularjs.org">
+<head>
+    <meta charset="utf-8">
+    <title>LinkedIn Angular example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- We use client cookies to save the user credentials -->
+    <script data-require="angular.js@1.4.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js" data-semver="1.4.3"></script>
+    <script src="//code.angularjs.org/1.2.16/angular-cookies.min.js"></script>
+
+    <!-- Auth0 Lock script and AngularJS module -->
+    <script src="//cdn.auth0.com/js/lock-8.2.min.js"></script>
+    <!-- angular-jwt and angular-storage -->
+    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+
+    <script src="//cdn.auth0.com/w2/auth0-angular-4.js"> </script>
+
+    <!-- Setting the right viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script>
+        // LoginCtrl.js
+
+        var obj = angular.module("aa", []);
+
+        obj.controller('AppCtrl', ['$scope', '$http', 'auth', 'store',
+            function ($scope, $http, auth, store) {
+                $scope.login = function () {
+                    auth.signin({}, function (profile, token) {
+                        // Success callback
+                        store.set('profile', profile);
+                        store.set('token', token);
+                        //$location.path('/');
+                        console.log(profile);
+                        console.log(token);
+                    }, function () {
+                        // Error callback
+                    });
+                }
+            }]);
+    </script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-controller="AppCtrl">
+
+<!-- login.tpl.html -->
+<!-- ... -->
+<input type="submit" ng-click="login()" />
+<!-- ... -->
+
+</body>
+
+</html>

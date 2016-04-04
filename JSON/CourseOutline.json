@@ -1,0 +1,106 @@
+{"courseDetails": [
+    {
+        "title": "AngularJS",
+        "Id": "IG01",
+        "bg": "yellow",
+        "Image" : "contents/images/angular.jpg",
+        "shortDesc":"JS framework",
+        "description" : "AngularJS, commonly referred to as Angular, is an open-source web application framework maintained by Google and a community of individual developers and corporations to address many of the challenges encountered in developing single-page applications. Its goal is to simplify both development and testing of such applications by providing a framework for client-side model–view–controller (MVC) architecture, along with components commonly used in rich internet applications.",
+        "Outline": [
+            {"Id": "IG01_1", "label": "Shapping Up with AngularJS","vLink": "http://www.youtube.com/embed/XGSy3_Czz8k"},
+            {"Id": "IG01_2", "label": "Understanding AngularJS $rootscope and $scope", "vLink": "https://www.youtube.com/embed/7XTHdcmjenI"},
+            {"Id": "IG01_3", "label": "Dot in AngularJS"},
+            {"Id": "IG01_4", "label": "Controller"},
+            {"Id": "IG01_5", "label": "Filter"},
+            {"Id": "IG01_6", "label": "Build-in Filter"},
+            {"Id": "IG01_7", "label": "Directives"},
+            {"Id": "IG01_8", "label": "Services"},
+            {"Id": "IG01_9", "label": "Promises"},
+            {"Id": "IG01_10", "label": "Server Communication"},
+            {"Id": "IG01_11", "label": "Event & Architecture"},
+            {"Id": "IG01_12", "label": "Caching & Security"},
+            {"Id": "IG01_13", "label": "Localization"}
+        ],
+        "isVideo":"",
+        "isTutorial":"",
+        "idForum":""
+    },
+    {
+        "title": "MongoDB",
+        "Id": "IG02",
+        "bg": "blue",
+        "Image" : "contents/images/mongodb.png",
+        "shortDesc":"MongoDB is a cross-platform document-oriented database",
+        "description" : "MongoDB is a cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB is free and open-source software.",
+        "Outline": [
+            {"Id": "IG02_1", "label": "Shapping Up with MongoDB"},
+            {"Id": "IG02_2", "label": "Install MongoDB"},
+            {"Id": "IG02_3", "label": "MongoDB CRUD Operations"},
+            {"Id": "IG02_4", "label": "Data Models"},
+            {"Id": "IG02_5", "label": "Security"},
+            {"Id": "IG02_6", "label": "Aggregation"},
+            {"Id": "IG02_7", "label": "Indexing in MongoDB"},
+            {"Id": "IG02_8", "label": "Replication"},
+            {"Id": "IG02_9", "label": "Sharding"},
+            {"Id": "IG02_10", "label": "Administration"}
+        ],
+        "isVideo":"",
+        "isTutorial":"",
+        "idForum":""
+    },
+    {
+        "title": "MVC5",
+        "Id": "IG03",
+        "bg": "red",
+        "Image" : "contents/images/angular.jpg",
+        "shortDesc":".Net",
+        "description" : "MongoDB is a cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB is free and open-source software.",
+        "Outline": [
+            {"Id": "IG02_1", "label": "Shapping Up with MongoDB"},
+            {"Id": "IG02_2", "label": "Install MongoDB"},
+            {"Id": "IG02_3", "label": "MongoDB CRUD Operations"},
+            {"Id": "IG02_4", "label": "Data Models"},
+            {"Id": "IG02_5", "label": "Security"},
+            {"Id": "IG02_6", "label": "Aggregation"},
+            {"Id": "IG02_7", "label": "Indexing in MongoDB"},
+            {"Id": "IG02_8", "label": "Replication"},
+            {"Id": "IG02_9", "label": "Sharding"},
+            {"Id": "IG02_10", "label": "Administration"}
+        ],
+        "isVideo":"",
+        "isTutorial":"",
+        "idForum":""
+    },
+    {
+        "title": "Miscellaneous",
+        "Id": "IG04",
+        "bg": "green",
+        "Image" : "contents/images/angular.jpg",
+        "shortDesc":"Miscellaneous",
+        "description" : "miscellaneous",
+        "Outline": [
+            {"Id": "IG03_1", "label": "Shapping Up with miscellaneous"},
+            {"Id": "IG03_2", "label": "About miscellaneous"}
+        ],
+        "isVideo":"",
+        "isTutorial":"",
+        "idForum":""
+    },
+    {
+        "title": "Miscellaneous 123",
+        "Id": "IG05",
+        "bg": "blue",
+        "Image" : "contents/images/angular.jpg",
+        "shortDesc":"Miscellaneous 123",
+        "description" : "miscellaneous",
+        "Outline": [
+            {"Id": "IG03_1", "label": "Shapping Up with miscellaneous"},
+            {"Id": "IG03_2", "label": "About miscellaneous"}
+        ],
+        "isVideo":"",
+        "isTutorial":"",
+        "idForum":""
+    }
+
+]
+}

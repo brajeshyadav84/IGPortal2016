@@ -1,0 +1,13 @@
+{"HrInterview": [
+    {
+        "header": "AngularJS",
+        "Id": "IG01",
+        "content" : "AngularJS, commonly referred to as Angular, is an open-source web application framework maintained by Google and a community of individual developers and corporations to address many of the challenges encountered in developing single-page applications. Its goal is to simplify both development and testing of such applications by providing a framework for client-side model–view–controller (MVC) architecture, along with components commonly used in rich internet applications."
+    },
+    {
+        "header": "MongoDB",
+        "Id": "IG02",
+        "content" : "MongoDB is a cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB is free and open-source software."
+    }
+
+]}

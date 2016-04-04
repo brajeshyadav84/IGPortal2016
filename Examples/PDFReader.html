@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>PDFObject example</title>
+	<script type="text/javascript" src="../app/js/vendor/pdfobject.js"></script>
+	<script type="text/javascript">
+		window.onload = function (){
+			var myPDF = new PDFObject({ url: "https://csumb.edu/sites/default/files/images/st-block-31-1425095442795-raw-facfocusclassroommanagement.pdf" }).embed("targetElementID");
+		};
+	</script>
+</head>
+
+<body>
+<div>It appears you don't have Adobe Reader or PDF support in this web
+	browser. <a href="sample.pdf">Click here to download the PDF</a></div>
+<div id="targetElementID">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="../node_modules/angular-material/angular-material.css">
+	<link rel="stylesheet" href="../node_modules/angular-material/angular-material.layouts.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+  <script src="../node_modules/angular-material/angular-material.js"></script>
+  
+
+	<style>
+		.inputdemoErrors .inputErrorsApp {
+			min-height: 48px; }
+		.inputdemoErrors md-input-container > p {
+			font-size: 0.8em;
+			text-align: left;
+			width: 100%; }
+	</style>
+	<script>
+	var a = angular.module('inputErrorsApp', ['ngMaterial', 'ngMessages']);
+		a.controller('AppCtrl', function($scope) {
+					$scope.project = {
+						description: 'Nuclear Missile Defense System',
+						rate: 500
+					};
+		});
+	</script>
+</head>
+<body ng-app="inputErrorsApp">
+<div ng-controller="AppCtrl" layout="column" ng-cloak>
+	<md-content layout-padding>
+		<form name="projectForm">
+			<md-input-container class="md-block">
+				<label>Description</label>
+				<input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
+				<div ng-messages="projectForm.description.$error">
+					<div ng-message="required">This is required.</div>
+					<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+				</div>
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Client Name</label>
+				<input required name="clientName" ng-model="project.clientName">
+				<div ng-messages="projectForm.clientName.$error">
+					<div ng-message="required">This is required.</div>
+				</div>
+			</md-input-container>
+		</form>
+	</md-content>
+</div>
+</body>
+</html>

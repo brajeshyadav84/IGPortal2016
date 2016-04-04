@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>angular-easyfb API demo</title>
+    <link data-require="bootstrap-css@3.0.0" data-semver="3.0.0" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <script data-require="angular.js@1.4.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js" data-semver="1.4.3"></script>
+    <script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
+    <script src="http://pc035860.github.io/angular-easyfb/angular-easyfb.min.js"></script>
+
+    <script>
+        var app = angular.module('plunker', ['ezfb', 'hljs'])
+
+                .config(function (ezfbProvider) {
+                    /**
+                     * Basic setup
+                     *
+                     * https://github.com/pc035860/angular-easyfb#configuration
+                     */
+                    ezfbProvider.setInitParams({
+                        appId: '798179366959362'
+                    });
+                })
+
+                .controller('MainCtrl', function($scope, ezfb, $window, $location) {
+
+                    updateLoginStatus(updateApiMe);
+
+                    $scope.login = function () {
+                        /**
+                         * Calling FB.login with required permissions specified
+                         * https://developers.facebook.com/docs/reference/javascript/FB.login/v2.0
+                         */
+                        ezfb.login(function (res) {
+                            /**
+                             * no manual $scope.$apply, I got that handled
+                             */
+                            if (res.authResponse) {
+                                updateLoginStatus(updateApiMe);
+                            }
+                        }, {scope: 'email,user_likes'});
+                    };
+
+                    $scope.logout = function () {
+                        /**
+                         * Calling FB.logout
+                         * https://developers.facebook.com/docs/reference/javascript/FB.logout
+                         */
+                        ezfb.logout(function () {
+                            updateLoginStatus(updateApiMe);
+                        });
+                    };
+
+                    $scope.share = function () {
+                        ezfb.ui(
+                                {
+                                    method: 'feed',
+                                    name: 'angular-easyfb API demo',
+                                    picture: 'http://plnkr.co/img/plunker.png',
+                                    link: 'http://plnkr.co/edit/qclqht?p=preview',
+                                    description: 'angular-easyfb is an AngularJS module wrapping Facebook SDK.' +
+                                    ' Facebook integration in AngularJS made easy!' +
+                                    ' Please try it and feel free to give feedbacks.'
+                                },
+                                function (res) {
+                                    // res: FB.ui response
+                                }
+                        );
+                    };
+
+                    /**
+                     * For generating better looking JSON results
+                     */
+                    var autoToJSON = ['loginStatus', 'apiMe'];
+                    angular.forEach(autoToJSON, function (varName) {
+                        $scope.$watch(varName, function (val) {
+                            $scope[varName + 'JSON'] = JSON.stringify(val, null, 2);
+                        }, true);
+                    });
+
+                    /**
+                     * Update loginStatus result
+                     */
+                    function updateLoginStatus (more) {
+                        ezfb.getLoginStatus(function (res) {
+                            $scope.loginStatus = res;
+
+                            (more || angular.noop)();
+                        });
+                    }
+
+                    /**
+                     * Update api('/me') result
+                     */
+                    function updateApiMe () {
+                        ezfb.api('/me', function (res) {
+                            $scope.apiMe = res;
+                        });
+                    }
+                });
+
+    </script>
+</head>
+
+<body ng-controller="MainCtrl">
+<div class="container">
+    <h2>angular-easyfb API demo</h2>
+
+    <div>
+        <button class="btn btn-primary" ng-click="login()" ng-disabled="loginStatus.status == 'connected'">Connect with Facebook</button>
+        &nbsp;
+        <button class="btn btn-danger" ng-click="logout()" ng-disabled="!loginStatus || loginStatus.status != 'connected'">Logout</button>
+        &nbsp;
+        <button class="btn btn-success" ng-click="share()">FB.ui</button>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4 class="text-info">loginStatus()</h4>
+            <div class="code-block" hljs source="loginStatusJSON"></div>
+        </div>
+        <div class="col-md-6">
+            <h4 class="text-info">api('/me')</h4>
+            <div class="code-block" hljs source="apiMeJSON"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>
