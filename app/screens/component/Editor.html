@@ -1,0 +1,31 @@
+
+<style>
+    .ta-editor {
+        min-height: 200px;
+        height: auto;
+        overflow: auto;
+        font-family: inherit;
+        font-size: 100%;
+    }
+</style>
+
+<md-bottom-sheet class="md-list md-has-header" ng-cloak>
+  <md-list>
+    <div class="row">
+            <div class="col-sm-12">
+                <md-input-container class="md-block">
+                  <label>Title</label>
+                  <input required md-no-asterisk name="TopicTitle" ng-model="Forum.TopicTitle">
+                </md-input-container>
+            </div>
+			<div class="col-sm-12">
+                <label>Description</label>
+				<div text-angular ng-model="htmlContent" name="demo-editor" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+                <div class="IG_right">
+                    <md-button class="md-primary" target="_blank">Cancel</md-button>
+                    <md-button class="md-raised md-primary">Submit</md-button>
+                </div>
+			</div>
+    </div>
+  </md-list>
+</md-bottom-sheet>

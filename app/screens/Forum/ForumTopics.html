@@ -1,0 +1,43 @@
+<div ng-controller="ForumController" class="IG_OuterContentLayout">
+	<div style="height: 20px;">
+		<div class="IG_right">
+            <md-button class="md-primary" target="_blank" ng-click="toggle = !toggle">Add Topics</md-button>
+            <md-button class="md-primary" target="_blank" ng-click="setRedirect('ManageForum')">Manage Forum</md-button>
+        </div>
+	</div>
+	<br />
+	
+	<md-subheader class="md-no-sticky">
+        <div ng-include="'screens/component/Pagination.html'" style="text-align: right;"></div>
+    </md-subheader>
+      <md-divider></md-divider>
+      <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9" ng-click="setRedirect('ForumDescription')">
+			<p><strong>Topics Titles</strong></p>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+			<p><strong>10 reply</strong></p>
+		</div>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+			<p><strong>Topics Titles</strong></p>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+			<p><strong>10 reply</strong></p>
+		</div>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+			<p><strong>Topics Titles</strong></p>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+			<p><strong>10 reply</strong></p>
+		</div>
+      </md-list-item>
+    
+    <div ng-include="'screens/component/Editor.html'" ng-show=toggle></div>
+    
+</div>

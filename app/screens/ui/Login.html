@@ -1,0 +1,56 @@
+<div class="loginOuter">
+	<div class="loginLayout">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div layout="column" ng-cloak>
+			<md-content layout-padding class="IG_transparent">
+				<form name="projectForm">
+					<md-input-container class="md-block">
+						<label>UserName</label>
+						<input required md-no-asterisk name="UserName" ng-model="project.UserName">
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>Password</label>
+						<input required name="Password" ng-model="project.Password">
+					</md-input-container>
+                    <div class="IG_right">
+                        <md-button class="md-raised md-primary">Login</md-button>
+                    </div>
+                    <div class="IG_right">
+                        <md-button class="md-primary" target="_blank" ng-click="setRedirect('ForgetPassword')">Forget Password?</md-button>
+                    </div>
+				</form>
+			</md-content>
+        </div>
+        <hr/>
+        <div class="IG_center">
+            If not registered User? 
+            <md-button class="md-primary" target="_blank" ng-click="setRedirect('Registration')">SignUp Now</md-button>
+        </div>
+    </div>
+        
+<!--
+		<div ng-controller="LinkedINCtrl">
+			<a href="" class="socialBtn" ng-click="onLinkedInLogin()">
+				<i class="fa fa-linkedin"></i>
+
+				<div class="text">Login with LinkedIn</div>
+			</a>
+		</div>
+		<div ng-controller="FBCtrl">
+			<a href="" class="socialBtn" ng-click="login()" ng-disabled="loginStatus.status == 'connected'">
+				<i class="fa fa-facebook"></i>
+
+				<div class="text">Login with Facebook</div>
+			</a>
+		</div>
+
+        <div ng-controller="GitCtrl">
+			<a href="" class="socialBtn" ng-click="login()">
+				<i class="fa fa-facebook"></i>
+
+				<div class="text">Login with GitHub</div>
+			</a>
+		</div>
+-->
+	</div>
+</div>

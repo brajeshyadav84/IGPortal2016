@@ -1,0 +1,25 @@
+
+<style>
+.paging-layout hr{
+    margin: 30px 0 30px;
+}
+</style>
+
+<div class="paging-layout" style="padding-right: 10px;" ng-click="onClickHandler()">
+    <paging
+        page="currentPage" 
+        page-size="pageSize" 
+        total="total"
+        text-first="{{textFirst}}"
+        text-last="{{textLast}}"
+        text-next="{{textNext}}"
+        text-prev="{{textPrev}}"
+        text-title-page="Page {page} Hover Over"
+        text-title-first="{{textTitleFirst}}"
+        text-title-last="{{textTitleLast}}"
+        text-title-next="{{textTitleNext}}"
+        text-title-prev="{{textTitlePrev}}"
+        show-prev-next="{{showPrevNext}}"
+        show-first-last="{{showFirstLast}}">
+    </paging>
+</div>

@@ -1,0 +1,201 @@
+.IG_Carousel {
+	margin-top: -12px;
+	padding: 20px;
+	background-color: #56c1ee;
+	background-size: cover;
+/*	background-image: url(../../contents/images/Interviewgully-Banner.jpg);*/
+}
+.IG_Banner {
+    margin-top: -12px;
+	padding: 20px;
+	background-color: lightgray;
+	background-size: cover;
+}
+
+.IG_Event {
+/*	background-image: url(../../contents/images/banner-background.png);*/
+    height: 80px;
+    background-color: #56c1ee;
+}
+
+.IG_Contact {
+/*	background-image: url(../../contents/images/banner-background.png);*/
+    height: 80px;
+    background-color: #56c1ee;
+}
+
+.IG_About {
+/*	background-image: url(../../contents/images/banner-background.png);*/
+    height: 80px;
+    background-color: #56c1ee;
+}
+
+.IG_HR {
+/*	background-image: url(../../contents/images/banner-background.png);*/
+    height: 80px;
+    background-color: #56c1ee;
+}
+
+.IG_Resume {
+/*	background-image: url(../../contents/images/banner-background.png);*/
+    height: 80px;
+    background-color: #56c1ee;
+}
+
+.IG_ResumeBanner {
+/*    background-image: url(../../contents/images/Resume-Banner.png);
+    background-attachment: fixed;
+    background-position: top 47% right 75%;
+    background-size: cover;
+    height: 500px;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    background-color: #56c1ee;*/
+}
+
+.IG_Job {
+/*	background-image: url(../../contents/images/jobs-banner.png);*/
+    height: 200px;
+    background-color: #56c1ee;
+}
+
+.IG_Training {
+/*    background-image: url(../../contents/images/banner-background.png);*/
+    height: 80px;
+    background-color: #56c1ee;
+}
+
+.IG_Project {
+/*    background-image: url(../../contents/images/banner-background.png);*/
+    height: 80px;
+    background-color: #56c1ee;
+}
+
+.IG_Forum {
+/*    background-image: url(../../contents/images/Interviewgully-Community.jpg);*/
+    height: 200px;
+    background-color: #56c1ee;
+}
+
+.IG-heading {
+    right: 1em;
+    color: #666;
+    z-index: 1;
+    text-shadow: #aaa 0 2px 4px;
+    text-align: center;
+}
+
+.IG-heading-left {
+    right: 1em;
+    color: #666;
+    z-index: 1;
+    text-shadow: #aaa 0 2px 4px;
+}
+
+.IG_Logo{
+	height: 40px;
+	width: 150px;
+	padding-top: 10px;
+}
+
+.IG_OuterContentLayout{
+	padding: 10px;
+	min-height: 350px;
+    margin-bottom: 20px;
+}
+
+.carouselMessage{
+	margin-top: 170px;
+	background: rgba(0, 0, 0, 0.48);
+	height: 70px;
+	color: white;
+	padding: 1px 10px;
+/*	text-align: center;*/
+}
+.carouselLink{
+	background: rgba(0, 0, 0, 0.48);
+	height: 30px;
+	color: white;
+	padding: 1px 20px;
+	text-align: right;
+}
+
+.IG_Container{
+	padding: 0px 10px;
+}
+
+
+div .text {
+	color: whitesmoke;
+    padding-right: 70px;
+/*    float: right;*/
+}
+
+.inputdemoErrors .inputErrorsApp {
+	min-height: 48px; 
+}
+
+.inputdemoErrors md-input-container > p {
+	font-size: 0.8em;
+	text-align: left;
+	width: 100%; 
+}
+
+.IG_center {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.IG_right {
+    text-align: right;
+}
+
+.IG_left {
+    text-align: left;
+}
+
+.IG_left_border {
+    border-left: solid 1px grey;
+}
+
+.IG_right_border {
+    border-right: solid 1px grey;
+}
+
+.IG_BlurTitle {
+/*    position: absolute;*/
+    top: 1em;
+    right: 1em;
+    color: white;
+    z-index: 1;
+    text-shadow: white 0 2px 4px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.IG_WhiteBackground{
+    border: 2px solid white;
+    height:150px;
+}
+
+.IG_GreyBackground{
+    background: #56c1ee;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.IG_Container_Data{
+    font-family: "proxima-nova","Helvetica Neue Light","Helvetica Neue","Helvetica,Arial","Lucida Grande","sans-serif";
+    font-weight: 400;
+    font-style: normal;
+    color: #51585e;
+}
+
+.IG_transparent{
+    background-color: transparent;
+}
+
+

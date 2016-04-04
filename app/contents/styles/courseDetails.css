@@ -1,0 +1,316 @@
+/*Static Page css*/
+.maindiv {
+	margin-right: 5px; /*border:1px solid red;*/
+	height: 100%;
+	margin-bottom:5px;
+}
+.overviewMain {
+	height: 100%
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/*used for opening menu*/
+.addbtn {
+	width: 10px;
+	height: 25px;
+	position: relative;
+	top: 48px;
+	z-index: 997;
+}
+/*used for closing menu*/
+.removebtn {
+	width: 10px;
+	height: 25px;
+	position: relative;
+	top: 48px;
+	z-index: 998;
+}
+.menubtn2 {
+	position: relative;
+	top: 0;
+	z-index: 999;
+	display: none;
+	cursor: hand;
+}
+
+/*left panel covering menu bar and middle bar*/
+.popupcontent {
+	width: 20%;
+	height: 100% !important;
+	/*height: 558 px;*/
+	position: relative;
+	top: -28px;
+	float: left;
+}
+/*not used in what is VMC static pages*/
+.bodycontent {
+	width: 80%;
+	float: left;
+	background: #FFFFFF;
+	margin-left: 5px;
+	padding-left: 2%;
+}
+/*for home image*/
+.homebtn {
+	width: 50px;
+	height: 38px;
+	background: #666666;
+	margin-top: 2px;
+	vertical-align: center;
+}
+
+/*for home text*/
+.homebtntext {
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	position: relative;
+}
+
+/*for middle pannel*/
+
+.navbtnplace {
+	width: 35px;
+	cursor: pointer;
+}
+
+.dropdownmenu {
+
+	background-color: #ffffff !important;
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+}
+
+.dropdownmenuOld {
+	width: 50px;
+	height: 506px;
+	background-color: #ffffff;
+	position: relative;
+	top: -506px;
+}
+.dropdownmenu ul {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.dropdownmenu ul li {
+	width: 90%;
+	padding: 5px 10px 5px 10px;
+	border-bottom: 1px solid #c9c9c9;
+	cursor: pointer;
+	list-style: none;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 12.04px;
+	color: #666666;
+	color: #fff;
+}
+.dropdownmenu ul li:hover {
+	width: 90%;
+	color: white;
+	padding: 5px 10px 5px 10px;
+	background: #01ace8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #01ace8 0%, #0067a9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01ace8), color-stop(100%,#0067a9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #01ace8 0%,#0067a9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01ace8', endColorstr='#0067a9',GradientType=0 ); /* IE6-9 */
+	cursor: pointer;
+}
+.dropdownmenu ul li a:hover {
+	color: white;
+	text-decoration: none;
+	background: #01ace8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #01ace8 0%, #0067a9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01ace8), color-stop(100%,#0067a9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #01ace8 0%,#0067a9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01ace8', endColorstr='#0067a9',GradientType=0 ); /* IE6-9 */
+}
+.dropdownmenu ul li.selectedLi {
+	width: 100%;
+	color: white;
+	padding: 5px 10px 5px 10px;
+	background: #01ace8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #01ace8 0%, #0067a9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01ace8), color-stop(100%,#0067a9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #01ace8 0%,#0067a9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01ace8', endColorstr='#0067a9',GradientType=0 ); /* IE6-9 */
+	cursor: pointer;
+}
+/* CSS fallback color: white;*/
+.dropdownmenu ul li.hovered {
+	width: 100%;
+	color: white;
+	padding: 5px 10px 5px 10px;
+	background: #01ace8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #01ace8 0%, #0067a9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01ace8), color-stop(100%,#0067a9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #01ace8 0%,#0067a9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #01ace8 0%,#0067a9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01ace8', endColorstr='#0067a9',GradientType=0 ); /* IE6-9 */
+	cursor: pointer;
+}
+a {
+
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.openbtn {
+	width: 13px;
+	height: 16px;
+	margin: 10px 10px 10px 15px;
+}
+.closebtn {
+	width: 13px;
+	height: 16px;
+	margin: 10px 10px 10px 15px;
+}
+.current {
+	background: #2989d8;
+	color: white;
+}
+/*static content*/
+.CustomUl {
+	padding-left: 22px;
+	background: #ffffff;
+	color: #797671;
+	font-size: 12px;
+}
+.Customli {
+	list-style: disc;
+	color: #797671;
+	font-size: 12.04px;
+	font-family: Arial;
+}
+
+.Customli a {
+
+	font-family: Arial;
+	font-size: 12.04px;
+	line-height: 20px;
+	color: #0082C9;
+	color: rgb(0, 130, 201);
+}
+
+.CustomTD {
+	width: 33%;
+	vertical-align: top;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-right: 10px;
+}
+
+/*grey boxes for static pages header*/
+.Customgreybox {
+	background: #797671;
+	padding: 10px;
+	float: left;
+	border-right: 1px solid #797671;
+	border-left: 1px solid #797671;
+	border-top: 0px solid #797671;
+	border-bottom: none;
+	text-decoration: none;
+	color: #f6a800;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: Arial;
+	width: 32%;
+	margin-right:5px;
+	vertical-align:center;
+	border-right: 5px solid #ffffff;
+}
+.Customgreybox span{
+	height:30%;
+	width:100%;
+}
+
+
+.commonOverviewCase {
+
+	font-family: Arial;
+	font-size: 12.04px;
+	color: #666666;
+	color: rgb(102, 102, 102);
+	float: left;
+	clear: both;
+	border: 1px solid #fffffff;
+	border-top: none;
+	border-left: none;
+	background: #fff;
+	padding-left: 10px;
+	padding-right: 2px;
+	width: 100%;
+	visibility: visible;
+	height: 100%;
+}
+.commonOverviewCaseTable {
+	font-family: Arial;
+	font-size: 15px;
+	color: #666666;
+	float: left;
+	clear: both;
+	border: 1px solid #FFFFFF;
+	border-top: none;
+	border-left: none;
+	background: #fff;
+	padding-left: 10px;
+	padding-right: 2px;
+	height: 80%;
+}
+
+.scrollable {
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
+	padding-right:10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+.heading {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	color: #000000;
+	color: rgb(0, 0, 0);
+	padding-top: 5px;
+
+}
+
+.responsive-video {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 60px; overflow: hidden;
+}
+
+
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
