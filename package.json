@@ -1,0 +1,52 @@
+{
+  "name": "interviewgully",
+  "version": "1.0.0",
+  "description": "social networking application",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "IG"
+  },
+  "keywords": [
+    "IG",
+    "IGully"
+  ],
+  "author": "Brajesh",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^2.3.1",
+    "gulp-ruby-sass": "^2.0.6",
+    "napa": "^2.3.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-aria": "^1.5.0",
+    "angular-easyfb": "^1.4.1",
+    "angular-highlightjs": "^0.5.1",
+    "angular-material": "^1.0.5",
+    "angular-messages": "^1.5.1",
+    "angular-route": "^1.5.0",
+    "angular-sanitize": "^1.5.0",
+    "angular-storage": "0.0.13",
+    "angular-ui-bootstrap": "^1.2.5",
+    "bootstrap": "^3.3.6",
+    "browserify": "^13.0.0",
+    "es6-promise": "^3.1.2",
+    "font-awesome": "^4.5.0",
+    "grunt-contrib-uglify": "^0.11.1",
+    "jsonlint": "^1.6.2",
+    "lodash": "^4.5.0",
+    "material-design-icons": "^2.2.0",
+    "mdi": "^1.4.57",
+    "v-accordion": "^1.5.1"
+  }
+}
