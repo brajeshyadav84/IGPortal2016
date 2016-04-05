@@ -1,0 +1,15 @@
+    #filelist {
+	    margin-top: 15px;
+	}
+
+	#uploadFilesButtonContainer, #selectFilesButtonContainer, #overallProgress {
+	    display: inline-block;
+	}
+
+	#overallProgress {
+	    float: right;
+	}
+
+	.yellowBackground {
+	  background: #F2E699;
+	}
