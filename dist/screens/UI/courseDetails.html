@@ -1,0 +1,100 @@
+<style>
+	#tblLeftPanel
+	{
+		height: 91.5%;
+	}
+
+	html[data-useragent*='rv:11.0'] #tblLeftPanel, html[data-useragent*='MSIE 10.0'] #tblLeftPanel, html[data-useragent*='MSIE 9.0'] #tblLeftPanel
+	{
+		height: 92%;
+	}
+</style>
+<div id="divOverviewMain" ng-controller="CourseDetailsCtrl" class="IG_Container">
+	<table id="tblOverviewMain" width="100%" style="padding-bottom: 5px; height: 100%">
+		<tr>
+			<td valign="top" style="height: 98.5%;">
+				<div id="leftDiv" class="maindiv clearfix" style="height: 100%;">
+					<div class="addbtn" id="addbtn">
+					</div>
+					<div class="popupcontent">
+						<a style="cursor: pointer;">
+							<div class="homebtn"  ng-click="setRedirect('Welcome')">
+								<div style="float: left;"><img src="contents/images/home.png" style="margin: 8px; height: 20px; width: 20px;" /></div>
+								<div style="float: right;padding: 10px;"><span class="homebtntext" style="padding-top: 1px;">Back to Home</span></div>
+							</div>
+						</a>
+						<table id="tblLeftPanel" width="100%" style="float: left; margin-top: 5px">
+							<tr style="height: 100%;">
+								<td id="leftTd" align="left" style="vertical-align: top; height: 100%; background: none !important;"
+								    class="dropdownmenu">
+									<!--494-->
+									<table style="height: 100%; background-color: #fff;">
+										<tr>
+											<td style="vertical-align: top">
+												<img src="{{logo}}" style="width: 70px;"/>
+												<div style="padding-top: 10px;" class="IG-heading-left">
+													<p style="cursor: pointer;border-bottom: 1px solid #c9c9c9;" ng-repeat="(index, hList) in headingList">
+														<span id="hList.Id" ng-click="viewDisplay(hList.Id)">{{hList.label}}</span>
+													</p>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td style="vertical-align: top; cursor: pointer; height: 100%">
+									<div id="navdiv" class="navbtnplace">
+										<div style="height: 5px">
+											&nbsp;</div>
+										<img src="contents/images/menubar.png" class="menubtn" style="margin: 0px 0 0 9px;
+                                            height: 25px; width: 22px; cursor: pointer;" />
+										<img src="contents/images/menubar.png" class="menubtn2" style="margin: 0px 0 0 9px;
+                                            height: 25px; width: 22px; cursor: pointer;" />
+										<div class="openbtn">
+											<img src="contents/images/open.png" style="height: 10px; width: 9px;" />
+										</div>
+										<div class="closebtn">
+											<img src="contents/images/close.png" style="height: 10px; width: 9px;" />
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</td>
+			<td valign="top" style="margin-left: 5px; height: 95%;">
+				<div id="overviewContent" style="height: 100%; margin-bottom: 5px;padding-left: 15px;">
+					<ul id="myTab" class="nav nav-tabs" style="cursor: pointer">
+						<li id="myTab1">
+							<a ng-click="tabDisplay('1')" data-toggle="tab">
+								Tutorial
+							</a>
+						</li>
+						<li id="myTab2"><a ng-click="tabDisplay('2')" data-toggle="tab">Videos</a></li>
+						<li id="myTab3"><a ng-click="tabDisplay('3')" data-toggle="tab">Articles</a></li>
+					</ul>
+					<div id="1">
+						{{dataDisplay.label}}
+						<p>The goal of Interviewgully is to provide you a platform where you can enhance your knowledge and skills via our articles and video tutorials. It also provide you a platform where you can interact with our experts with your queries and our expert will help you to resolve your queries via email. and if required than skype chat as well.</p>
+					</div>
+					<div id="2" style="height: 100%;">
+						<div class="col-md-6" style="height: 100%;">
+							<iframe width="100%" height="80%"
+							        ng-src="{{videoLink}}" allowfullscreen>
+							</iframe>
+						</div>
+						<div  class="col-md-6" style="height: 100%;">
+							<p>The goal of Interviewgully is to provide you a platform where you can enhance your knowledge and skills via our articles and video tutorials. It also provide you a platform where you can interact with our experts with your queries and our expert will help you to resolve your queries via email. and if required than skype chat as well.</p>
+							<p>If you have any query feel free to add on forum section. we will try to resolve ASAP. <a>for query</a></p>
+						</div>
+					</div>
+					<div id="3">
+						hi <p>The goal of Interviewgully is to provide you a platform where you can enhance your knowledge and skills via our articles and video tutorials. It also provide you a platform where you can interact with our experts with your queries and our expert will help you to resolve your queries via email. and if required than skype chat as well.</p>
+					</div>
+
+
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>

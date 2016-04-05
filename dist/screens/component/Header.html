@@ -1,8 +1,7 @@
 <div ng-controller="MenuCtrl">
     <div class="headerIG">
 	    <div class="left">
-		    <!--<a ng-click="showLeft($event)" class="hembergerMenu">testing</a>-->
-		    <img src="contents/images/hamburger.png" class="hamburgerSign" ng-click="showLeft($event)"/>
+		    <img src="contents/images/hamburger.png" class="hamburgerSign" ng-click="showLeft($event)"/> 
 		    <img src="contents/images/logo.png" class="IG_Logo"/>
 	    </div>
 	    <div class="rightMenu">
@@ -17,22 +16,24 @@
 
     <menu visible="leftVisible" alignment="left">
 	    <div class="welcomeMenu">
-
+            
 	    </div>
-	    <menu-item hash="first-page">Home</menu-item>
-	    <menu-item hash="second-page">About Team</menu-item>
-	    <menu-item hash="third-page">Contact Us</menu-item>
-	    <menu-item hash="Fourth-page" classname="leftCategory">Professional Services</menu-item>
-	    <menu-item hash="Fifth-page">HR Prepration</menu-item>
-	    <menu-item hash="Fifth-page">Resume Builder</menu-item>
-	    <menu-item hash="Fifth-page">College Project List</menu-item>
-	    <menu-item hash="Fifth-page">Jobs / Walkin's</menu-item>
-	    <menu-item hash="Fifth-page">Online Training</menu-item>
-	    <menu-item hash="Fifth-page">Online Events</menu-item>
-	    <menu-item hash="Fourth-page" classname="leftCategory">Community</menu-item>
-	    <menu-item hash="Fifth-page">Facebook</menu-item>
-	    <menu-item hash="Fifth-page">LinkedIn</menu-item>
-	    <menu-item hash="Fifth-page">YouTube</menu-item>
+	    <menu-item hash="first-page" ng-click="setRedirect('Home')">Home</menu-item>
+	    <menu-item hash="second-page" ng-click="setRedirect('AboutUs')">About Team</menu-item>
+	    <menu-item hash="third-page" ng-click="setRedirect('ContactUs')">Contact Us</menu-item>
+	    <menu-item hash="" classname="leftCategory">Professional Services</menu-item>
+	    <menu-item hash="Fifth-page" ng-click="setRedirect('ForumHome')">Discussion Forum</menu-item>
+	    <menu-item hash="Fifth-page" ng-click="setRedirect('HRPrepration')">HR Prepration</menu-item>
+	    <menu-item hash="Fifth-page" ng-click="setRedirect('ResumeBuilder')">Resume Builder</menu-item>
+	    <menu-item hash="Fifth-page" ng-click="setRedirect('ProjectList')">College Project List</menu-item>
+	    <menu-item hash="Fifth-page" ng-click="setRedirect('Jobs')">Jobs / Walkin's</menu-item>
+	    <menu-item hash="Fifth-page" ng-click="setRedirect('OnlineEvents')">Online Events</menu-item>
+	    <menu-item hash="" classname="leftCategory">Utility Tools</menu-item>
+	    <menu-item hash="Fifth-page" ng-click="setRedirect('JsonFormatter')">JSON Formatter</menu-item>
+        
+        <menu-item hash="" classname="leftCategory">Online Discussion</menu-item>
+	    <menu-item hash="Chat-page" ng-click="setRedirect('ChatRoom')">ChatRoom</menu-item>
+
     </menu>
 
     <menu visible="rightVisible" alignment="right">
@@ -42,11 +43,13 @@
 			    {{UserDetails.name}}
 		    </div>
 	    </div>
-	    <menu-item hash="first-page">My Account</menu-item>
-	    <menu-item hash="second-page">Change Password</menu-item>
-	    <menu-item hash="third-page">Share your Feedback</menu-item>
-	    <menu-item hash="Fourth-page">Raise Your Query</menu-item>
+	    <menu-item hash="first-page" ng-click="setRedirect('Account')">My Account</menu-item>
+	    <menu-item hash="second-page" ng-click="setRedirect('Inbox')">Inbox</menu-item>
+        <menu-item hash="Fourth-page" ng-click="setRedirect('SuggestedProject')">Suggested Project</menu-item>
+	    <menu-item hash="third-page" ng-click="setRedirect('ShareFeedback')">Share your Feedback</menu-item>
+	    <menu-item hash="Fourth-page" ng-click="setRedirect('RaiseQuery')">Raise Your Query</menu-item>
 	    <menu-item hash="Fourth-page" ng-click="shareOnFB()">Share with facebook</menu-item>
+        <menu-item hash="second-page" ng-click="setRedirect('ChangePassword')">Change Password</menu-item>
 	    <menu-item hash="logout" ng-click="logout()">Logout</menu-item>
     </menu>
 </div>

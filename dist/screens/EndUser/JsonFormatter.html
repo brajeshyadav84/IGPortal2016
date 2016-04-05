@@ -1,0 +1,19 @@
+<!--<div ng-controller="JsonFormatterCtrl">-->
+	<!--<div ng-jsoneditor ng-model="obj.data" options="obj.options" prefer-text="false" style="width: 400px; height: 300px;"></div>-->
+<!--</div>-->
+
+<div ng-app="ngApp" ng-controller="JsonFormatterCtrl">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<center>
+			<button type="button" class="btn btn-primary" ng-click="changeOptions()"><i class="fa fa-check-circle"></i>JSON to OBJECT</button>
+		</center>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<center><div ng-jsoneditor="onLoad" ng-model="objCode.data" options="objCode.options" style="width: 350px; height: 300px;text-align: left;"></div></center>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<center><div ng-jsoneditor="onLoad" ng-model="objTree.data" options="objTree.options" style="width: 350px; height: 300px;text-align: left;"></div></center>
+	</div>
+
+
+</div>

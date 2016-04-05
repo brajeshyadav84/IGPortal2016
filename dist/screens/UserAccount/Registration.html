@@ -1,8 +1,7 @@
-<div ng-controller="ContactCtrl">
-    <div class="IG_Banner IG_Contact IG_BlurTitle">
-        Connect with Us
+<div ng-controller="UserCtrl">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
     </div>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 		<div layout="column" ng-cloak>
 			<md-content layout-padding>
 				<form name="projectForm">
@@ -15,23 +14,26 @@
 						<input required name="UserEmail" ng-model="project.UserEmail">
 					</md-input-container>
 					<md-input-container class="md-block">
-						<label>Subject</label>
-						<input required name="Subject" ng-model="project.Subject">
+						<label>Mobile</label>
+						<input required name="Mobile" ng-model="project.Mobile">
 					</md-input-container>
-					<md-input-container class="md-block">
-						<label>Description</label>
-						<textarea md-maxlength="500" required name="Description" ng-model="project.Description" col="3" row="3"></textarea>
+                    <md-input-container class="md-block">
+						<label>Password</label>
+						<input required name="Password" ng-model="project.Password">
 					</md-input-container>
+                    <md-input-container class="md-block">
+						<label>Retype Password</label>
+						<input required name="RPassword" ng-model="project.RPassword">
+					</md-input-container>
+					
                     <div class="IG_right">
                         <md-button class="md-primary" target="_blank">Reset</md-button>
                         <md-button class="md-raised md-primary">Submit</md-button>
                     </div>
 				</form>
 			</md-content>
-		</div>
-	</div>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-		
-	</div>
-
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+    </div>
 </div>

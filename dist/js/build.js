@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
-var objIG = angular.module("IG", ['ngRoute','ngSanitize','angular-carousel-3d','ezfb', 'hljs','angular-storage']);
+var objIG = angular.module("IG", ['ngRoute','ngSanitize','angular-carousel-3d','ezfb', 'hljs','angular-storage','ng.jsoneditor','ngMaterial', 'ngMessages','textAngular','vAccordion','ngAnimate','ui.bootstrap','firebase']);
 
 objIG.run(function($rootScope) {
     document.addEventListener("keyup", function(e) {
@@ -31,54 +31,14 @@ objIG.config(function (ezfbProvider,storeProvider) {
 
 module.exports = objIG;
 },{}],2:[function(require,module,exports){
-var Promise = require('es6-promise').Promise;
-var IGUrl = require("../configs/IGUrl");
-var Constant = require("../configs/Constant");
-
-var HttpRequest = {
-
-	prepareURL: function (customURL) {
-		var url = customURL.replace('+', '/').replace('+', '/').replace('+', '/').replace('+', '/');
-		return url;
-	},
-
-	request: function(method, methodName, params, headers, resolve, reject) {
-		var self = this;
-		var url = IGUrl.DOMAIN;
-		if ((url.substring(0, 4) == "http") || (url.substring(0, 4) == "https")) {
-			url = self.prepareURL(url + methodName + params);
-		} else {
-			url = self.prepareURL(IGUrl.PROTOCOL + url + methodName + params);
-		}
-		return url;
-	},
-
-	get: function (url) {
-		$http.get(url)
-			.then(function(res){
-				$scope.courseDetails = res.data.courseDetails;
-				$scope.GlobalcourseDetails = res.data.courseDetails;
-		});
-	},
-
-	//post: function (method, methodName) {
-	//	var self = this;
-	//	return new Promise(function (resolve, reject) {
-	//		var method = "POST";
-	//		self.request(method, methodName, params, headers, resolve, reject);
-	//	});
-	//},
-	//
-	//encrypt: function () {
-	//
-	//}
-
+var ChatRoomConstant = {
+    
 };
 
-module.exports = HttpRequest;
-},{"../configs/Constant":3,"../configs/IGUrl":4,"es6-promise":19}],3:[function(require,module,exports){
+module.exports = ChatRoomConstant;
+},{}],3:[function(require,module,exports){
 var Constant = {
-
+    
 };
 
 module.exports = Constant;
@@ -101,30 +61,148 @@ objIG.config(function($routeProvider,$locationProvider,$logProvider){
 	$logProvider.debugEnabled(true);
 
 	$routeProvider.
-	when('/Welcome',
+	when('/WelcomeIG',
 		{
-			templateUrl:"screens/UI/courseContent.html",
+			templateUrl:"screens/ui/CourseContent.html",
+			controller:'',
+		}).
+    when('/Innovation',
+		{
+			templateUrl:"screens/ui/TakeUserIdea.html",
 			controller:'',
 
 		}).
 	when('/Login',
 		{
-			templateUrl:"screens/component/Login.html",
+			templateUrl:"screens/ui/Login.html",
 			controller:'',
 
 		}).
-	//when('/AboutUS',
-	//	{
-	//		templateUrl:"Views/aboutUS.html",
-	//		controller:'aboutUSController',
-	//
-	//	}).
-	//when('/User',
-	//	{
-	//		templateUrl:"Views/User/UserHome.html",
-	//		controller:'homeController',
-	//
-	//	}).
+    when('/ProjectSuggestion',
+		{
+			templateUrl:"screens/userAccount/ProjectSuggestion.html",
+			controller:'',
+
+		}).
+    when('/Account',
+		{
+			templateUrl:"screens/userAccount/Account.html",
+			controller:'',
+
+		}).
+    when('/ChangePassword',
+		{
+			templateUrl:"screens/userAccount/ChangePassword.html",
+			controller:'',
+
+		}).
+    when('/Registration',
+		{
+			templateUrl:"screens/userAccount/Registration.html",
+			controller:'',
+
+		}).
+    when('/ForgetPassword',
+		{
+			templateUrl:"screens/userAccount/ForgetPassword.html",
+			controller:'',
+
+		}).
+    when('/RaiseQuery',
+		{
+			templateUrl:"screens/userAccount/RaiseQuery.html",
+			controller:'',
+
+		}).
+    when('/ShareFeedback',
+		{
+			templateUrl:"screens/userAccount/ShareFeedback.html",
+			controller:'',
+
+		}).
+	when('/Course/:CourseID/:RequestedTab',
+		{
+			templateUrl:"screens/ui/CourseDetails.html",
+			controller:''
+		}).
+	when('/JsonFormatter',
+		{
+			templateUrl:"screens/endUser/JsonFormatter.html",
+			controller:'',
+
+		}).
+	when('/ForumHome',
+		{
+			templateUrl:"screens/Forum/ForumHome.html",
+			controller:'',
+
+		}).
+	when('/ForumDescription',
+		{
+			templateUrl:"screens/Forum/ForumTopicDescription.html",
+			controller:'',
+
+		}).
+	when('/ForumTopics',
+		{
+			templateUrl:"screens/Forum/ForumTopics.html",
+			controller:'',
+
+		}).
+    when('/ManageForum',
+		{
+			templateUrl:"screens/Forum/ManageForum.html",
+			controller:'',
+
+		}).
+	when('/Jobs',
+		{
+			templateUrl:"screens/endUser/jobsWalkins.html",
+			controller:'',
+
+		}).
+	when('/ResumeBuilder',
+		{
+			templateUrl:"screens/endUser/ResumeBuilder.html",
+			controller:'',
+
+		}).
+	when('/HRPrepration',
+		{
+			templateUrl:"screens/endUser/HRPrepration.html",
+			controller:'',
+
+		}).
+	when('/OnlineEvents',
+		{
+			templateUrl:"screens/event/EventDisplay.html",
+			controller:'',
+
+		}).
+	when('/ContactUs',
+		{
+			templateUrl:"screens/endUser/Contact.html",
+			controller:'',
+	
+		}).
+    when('/AboutUs',
+		{
+			templateUrl:"screens/endUser/About.html",
+			controller:'',
+	
+		}).
+    when('/ChatRoom',
+		{
+			templateUrl:"screens/component/ChatRoom.html",
+			controller:'',
+	
+		}).
+    when('/ProjectList',
+		{
+			templateUrl:"screens/endUser/ProjectIdea.html",
+			controller:'',
+	
+		}).
 	//when('/UserProfile',
 	//	{
 	//		templateUrl:"Views/User/UserProfile.html",
@@ -137,15 +215,74 @@ objIG.config(function($routeProvider,$locationProvider,$logProvider){
 	//		controller:'userCourseDisplayController',
 	//
 	//	}).
-	otherwise({redirectTo:'/Welcome',templateUrl:"screens/component/Carousel.html"});
+	otherwise({redirectTo:'/WelcomeIG',templateUrl:"screens/ui/CourseContent.html"});
 
 	//$locationProvider.html5Mode(true);
 });
 },{"../App.js":1}],6:[function(require,module,exports){
+var objIG = require("../App.js");
+
+objIG.controller('AccordionCtrl',function($scope,$location,$rootScope){
+
+	$scope.panesA = [
+        {
+          id: 'pane-1a',
+          header: 'Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis.',
+          content: 'Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi.',
+          isExpanded: true
+        },
+        {
+          id: 'pane-2a',
+          header: 'Pane 2',
+          content: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.'
+        },
+        {
+          id: 'pane-3a',
+          header: 'Pane 3',
+          content: 'Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non.',
+
+          subpanes: [
+            {
+              id: 'subpane-1a',
+              header: 'Subpane 1',
+              content: 'Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non.'
+            },
+            {
+              id: 'subpane-2a',
+              header: 'Subpane 2 (disabled)',
+              content: 'Curabitur et ligula. Ut molestie a, ultricies porta urna. Quisque lorem tortor fringilla sed, vestibulum id.',
+              isDisabled: true
+            }
+          ]
+        }
+      ];
+
+      $scope.expandCallback = function (index, id) {
+        console.log('expand:', index, id);
+      };
+
+      $scope.collapseCallback = function (index, id) {
+        console.log('collapse:', index, id);
+      };
+
+      $scope.$on('accordionA:onReady', function () {
+        console.log('accordionA is ready!');
+      });
+
+});
+
+},{"../App.js":1}],7:[function(require,module,exports){
 
 var objIG = require("../App.js");
 
-objIG.controller('CarouselCtrl',['$scope',  function($scope) {
+objIG.controller('CarouselCtrl',['$scope', '$http', '$filter',  function($scope, $http, $filter) {
+
+	$http.get('../JSON/CourseOutline.json')
+		.then(function(res){
+			$scope.courseDetails = res.data.courseDetails;
+			$scope.selectedCourseDetails = res.data.courseDetails[0];
+			$scope.slides2 = res.data.courseDetails;
+	});
 
 	$scope.options2 = {
 		visible: 5,
@@ -159,13 +296,13 @@ objIG.controller('CarouselCtrl',['$scope',  function($scope) {
 		controls: true
 	};
 
-	$scope.slides2 = [
-		{'bg': '#2a6496', caption: 'First'},
-		{'bg': '#000000', caption: 'Second '},
-		{'bg': '#ffcc41', caption: 'Third'},
-		{'bg': '#445fac', caption: 'fourth'},
-		{'bg': '#442BF3', caption: 'fifth'}
-	];
+	//$scope.slides2 = [
+	//	{'Id':'IG01', 'Image': '#2a6496', title: 'First', description:'testing', isVideo:'', isTutorial:'',idForum:''},
+	//	{'Id':'IG02', 'Image': '#000000', title: 'Second', description:'testing', isVideo:'', isTutorial:'',idForum:''},
+	//	{'Id':'IG03', 'Image': '#ffcc41', title: 'Third', description:'testing', isVideo:'', isTutorial:'',idForum:''},
+	//	{'Id':'IG04', 'Image': '#445fac', title: 'fourth', description:'testing', isVideo:'', isTutorial:'',idForum:''},
+	//	{'Id':'IG02', 'Image': '#442BF3', title: 'fifth', description:'testing', isVideo:'', isTutorial:'',idForum:''}
+	//];
 
 	$scope.lastSlide = function (index) {
 		//$log.log('Last Slide Selected callback triggered. \n == Slide index is: ' + index + ' ==');
@@ -177,20 +314,307 @@ objIG.controller('CarouselCtrl',['$scope',  function($scope) {
 
 	$scope.selectedClick = function (index) {
 		//$log.log('Selected Slide Clicked callback triggered. \n == Slide index is: ' + index + ' ==');
+		//$scope.selectedCourseDetails = jQuery.grep($scope.selectedCourseDetails, function( a ) {
+		//	return a.Id == index;
+		//});
+		console.log("brajesh selectedClick");
 	}
 
 	$scope.slideChanged = function (index) {
 		//$log.log('Slide Changed callback triggered. \n == Slide index is: ' + index + ' ==');
+		console.log("brajesh slideChanged");
+		//setTimeout(function () {
+	        $scope.$apply(function () {
+	            $scope.selectedCourseDetails = $scope.courseDetails[index];
+	        });
+	    //}, 2000);
+	    //$scope.$digest();
+		console.log($scope.selectedCourseDetails);
 	}
+
+}]);
+},{"../App.js":1}],8:[function(require,module,exports){
+
+var objIG = require("../App.js");
+
+objIG.controller('ChatRoomCtrl',['$scope', '$sce',  function($scope, $sce) {
+    $scope.chatURL = "https://gitter.im/brajeshyadav84/";
+    $scope.currentChatURL = $sce.trustAsResourceUrl($scope.chatURL);
+    
+    //$("#profile-region").hide();
+    
+}]);
+},{"../App.js":1}],9:[function(require,module,exports){
+
+var objIG = require("../App.js");
+
+objIG.controller('ContactCtrl',['$scope', '$http',  function($scope, $http) {
+
 
 
 }]);
-},{"../App.js":1}],7:[function(require,module,exports){
+},{"../App.js":1}],10:[function(require,module,exports){
+/**
+ * Created by brajesh on 6/3/16.
+ */
+
 var objIG = require("../App.js");
+
+objIG.controller('CourseDetailsCtrl',['$scope','$routeParams','$http', '$filter', '$sce', function($scope, $routeParams, $http, $filter, $sce) {
+
+	$scope.RequestedTab = $routeParams.RequestedTab;
+	$scope.CourseID = $routeParams.CourseID;
+	console.log($routeParams);
+
+	$http.get('../JSON/CourseOutline.json')
+		.then(function(res){
+			$scope.courseDetails1 = $scope.GlobalcourseDetails1 = res.data.courseDetails;
+			setHeadlines($scope.courseDetails1);
+	});
+
+	function setHeadlines(data){
+		var colheading = $filter('filter')(data, {Id: $scope.CourseID})[0];
+		$scope.headingList = colheading.Outline;
+		$scope.logo = colheading.Image;
+	}
+	$scope.dataDisplay = "";
+	$scope.viewDisplay = function(id){
+		$scope.videoLink = "";
+		$scope.dataDisplay = $filter('filter')($scope.headingList, {Id: id})[0];console.log($scope.dataDisplay);
+		$scope.videoLink = $sce.trustAsResourceUrl($scope.dataDisplay.vLink);
+	}
+	$scope.tabDisplay = function(tabId){
+		openTab = tabId;
+		for(var i = 1 ; i<=4; i++){
+			$("#"+i).hide();
+		}
+		switch (openTab) {
+			case "1":
+				$("#"+openTab).show();
+				break;
+			case "2":
+				$("#"+openTab).show();
+				break;
+			case "3":
+				$("#"+openTab).show();
+				break;
+
+		}
+	}
+	// Requested tab open
+	var reqTab = "myTab";
+	var openTab = "";
+	switch ($scope.RequestedTab) {
+		case 'file':
+			reqTab = reqTab + '1';
+			openTab = "1";
+			$scope.tabDisplay(openTab);
+			break;
+		case 'video':
+			reqTab = reqTab + '2';
+			openTab = "2";
+			$scope.tabDisplay(openTab);
+			break;
+		case 'articles':
+			reqTab = reqTab + '3';
+			openTab = "3";
+			$scope.tabDisplay(openTab);
+			break;
+		default:
+			reqTab = reqTab + '1';
+			$scope.tabDisplay(openTab);
+	}
+	$('#'+reqTab).addClass('active');
+
+//dynamic add CSS color to LI in Slider on hover
+	$(".dropdownmenu  li").hover(function () {
+		$("#menu li").removeClass('selectedLi');
+		selectedLink.css("background-color", "#ffffff");
+		$(this).addClass('hovered');
+	});
+
+
+//dynamic add CSS color on LI when mouseout
+	$(".dropdownmenu  li").mouseout(function () {
+		$(this).removeClass('hovered');
+		selectedLink.addClass('selectedLi');
+
+	});
+	var selectedLink = $('#linkover');
+	var opened = false;
+//function for opening left menu bar and display menu links
+	openStaticMenu();
+
+//function call to load overview page as defualt page
+	//loadcaseStudies();
+
+//event to open left menu and expand right panel
+	$('.navbtnplace').click(function () {
+		if (opened) {
+			openStaticMenu();
+		}
+		else {
+			closeStaticMenu();
+		}
+		opened = opened ? false : true;
+	});
+
+
+//redirect to home page
+	//$scope.redirectHomeClick = function () {
+	//    $state.transitionTo(CONFIG.PAGE_NAME.homePage);
+	//};
+	/*function for opening left menu bar */
+	function openStaticMenu() {
+
+		$('.homebtn').animate({ width: "150px" });
+		$('.homebtntext').show();
+		//$('.homebtntext').animate({ width: "100px" });
+		$('.popupcontent').animate({ width: "150px" });
+		$('.dropdownmenu').animate({ width: "185px" });
+		//$('.navbtnplace').animate({ left: "-35px" });
+		$('.removebtn').animate({ left: "-35px" });
+		$('.dropdownmenu').show();
+		$('.closebtn').show();
+		$('.openbtn').hide();
+		$('.dropdownmenu ul li').show();
+		$('.menubtn').css('display', 'none');
+		$('.menubtn2').css('display', 'block');
+
+
+	}
+
+	/*function for closing left menu bar */
+	function closeStaticMenu() {
+		$('.homebtn').animate({ width: "35px" });
+		//$('.homebtntext').animate({ width: "0px" });
+		$('.dropdownmenu').animate({ width: "35px" });
+		$('.popupcontent').animate({ width: "35px" });
+		$('.navbtnplace').animate({ left: "0px" });
+		$('.removebtn').animate({ left: "0px" });
+		$('.homebtntext').hide();
+		$('.dropdownmenu').hide();
+		$('.closebtn').hide();
+		$('.openbtn').show();
+		$('.dropdownmenu ul li').hide();
+	}
+
+}]);
+},{"../App.js":1}],11:[function(require,module,exports){
+var objIG = require("../App.js");
+
+objIG.controller('EditorCtrl',['$scope', '$http',  function($scope, $http) {
+    $scope.orightml = 'welcome Test';
+    $scope.htmlcontent = $scope.orightml;
+    $scope.disabled = true;
+}]);
+},{"../App.js":1}],12:[function(require,module,exports){
+/**
+ * Created by brajesh on 10/3/16.
+ */
+
+var objIG = require("../App.js");
+
+objIG.controller('ForumController',['$scope', function($scope) {
+	//$scope.toggle = true;
+    $scope.toggle = false;
+    
+    //pagination concept
+    $scope.currentPage = 1;
+    $scope.pageSize = 10;
+    $scope.total = 30;
+    $scope.textFirst = 'First';
+    $scope.textLast = 'Last';
+    $scope.textNext = 'Next';
+    $scope.textPrev = 'Prev';
+    $scope.textTitleFirst = 'First';
+    $scope.textTitleLast = 'Last';
+    $scope.textTitleNext = 'Next';
+    $scope.textTitlePrev = 'Prev';
+    $scope.showPrevNext="true";
+    $scope.showFirstLast="true";
+    
+    $scope.onClickHandler = function(){
+        console.log("onClickHandler here", $rootScope.currentPage);  
+    };
+     
+    
+}]);
+},{"../App.js":1}],13:[function(require,module,exports){
+
+var objIG = require("../App.js");
+
+
+
+objIG.controller('GitCtrl',['$scope', '$sce','AuthFactory',  function($scope, $sce, AuthFactory) {
+    
+    $scope.login = function (){
+        AuthFactory.$authWithOAuthPopup("github").then(function(authData){
+            console.log("Brajesh github authData::");
+            console.log(authData);
+        }).catch(function(error){
+            console.log("Brajesh error::");
+            console.log(error);
+        })
+    }
+    
+    $scope.logout = function(){
+        AuthFactory.$unauth();
+    }
+    
+}]);
+},{"../App.js":1}],14:[function(require,module,exports){
+var objIG = require("../App.js");
+
+objIG.controller('HRPreprationCtrl',['$scope', '$location', '$rootScope', '$http', function($scope,$location,$rootScope,$http) {
+    var colHRQuestion = [];
+    $http.get('../JSON/HR.json')
+		.then(function(res){
+            colHRQuestion = res.data.HrInterview;
+			$scope.panesA = colHRQuestion;
+	});
+    
+	$scope.expandCallback = function (index, id) {
+        console.log('expand:', index, id);
+      };
+
+    $scope.collapseCallback = function (index, id) {
+        console.log('collapse:', index, id);
+      };
+
+    $scope.$on('accordionA:onReady', function () {
+        console.log('accordionA is ready!');
+    });
+    
+    //pagination concept
+    $scope.currentPage = 1;
+    $scope.pageSize = 10;
+    $scope.total = 30;
+    $scope.textFirst = 'First';
+    $scope.textLast = 'Last';
+    $scope.textNext = 'Next';
+    $scope.textPrev = 'Prev';
+    $scope.textTitleFirst = 'First';
+    $scope.textTitleLast = 'Last';
+    $scope.textTitleNext = 'Next';
+    $scope.textTitlePrev = 'Prev';
+    $scope.showPrevNext="true";
+    $scope.showFirstLast="true";
+    
+    $scope.onClickHandler = function(){
+        console.log("onClickHandler here", $rootScope.currentPage);  
+    };
+      
+    
+}]);
+},{"../App.js":1}],15:[function(require,module,exports){
+var objIG = require("../App.js");
+var HttpRequest = require("../network/HttpRequest");
 
 objIG.controller('IndexCtrl',function($scope,$location,$rootScope){
 
 	$scope.setRedirect = function(route) {
+		console.log(route);
 		$location.path(route);
 	};
 
@@ -202,9 +626,45 @@ objIG.controller('IndexCtrl',function($scope,$location,$rootScope){
 		$location.path(route);
 	};
 
+
+	//HttpRequest.get("'JSON/CourseOutline.json'");
+
 })
 
-},{"../App.js":1}],8:[function(require,module,exports){
+},{"../App.js":1,"../network/HttpRequest":29}],16:[function(require,module,exports){
+/**
+ * Created by brajesh on 7/3/16.
+ */
+var objIG = require("../App.js");
+
+objIG.controller('JsonFormatterCtrl', [ '$scope', function($scope) {
+	//$scope.obj = {data: json, options: { mode: 'tree' }};
+	//
+	//$scope.btnClick = function() {
+	//	$scope.obj.options.mode = 'code'; //should switch you to code view
+	//};
+
+	//var json = [];//{"Array": [1, 2, 3], "Boolean": true, "Null": null, "Number": 123, "Object": {"a": "b", "c": "d"}, "String": "Hello World"};
+
+	$scope.objCode = {data: {}, options: {mode: 'code'}};
+	//$scope.objTree = {data: {}, options: {mode: 'tree'}};
+	$scope.onLoad = function (instance) {
+		//instance.expandAll();
+	};
+	//$scope.changeData = function () {
+	//	//$scope.obj.data = {foo: 'bar'};
+	//};
+	$scope.changeOptions = function ($scope) {
+		//$scope.obj.options.mode = $scope.obj.options.mode == 'tree' ? 'code' : 'tree';
+		$scope.objTree = {data: $scope.objCode.data, options: {mode: 'tree'}};
+	};
+
+	//other
+	//$scope.pretty = function (objCode) {
+	//	return angular.toJson(objCode, true);
+	//}
+}]);
+},{"../App.js":1}],17:[function(require,module,exports){
 
 var objIG = require("../App.js");
 
@@ -370,7 +830,7 @@ objIG.controller('FBCtrl', function($scope, ezfb, $rootScope,store) {
 		});
 	}
 });
-},{"../App.js":1}],9:[function(require,module,exports){
+},{"../App.js":1}],18:[function(require,module,exports){
 var objIG = require("../App.js");
 
 objIG.controller('MenuCtrl',['$scope', '$rootScope','store', function($scope, $rootScope,store) {
@@ -384,8 +844,6 @@ objIG.controller('MenuCtrl',['$scope', '$rootScope','store', function($scope, $r
 
     $scope.showRightMenu = function() {
         $rootScope.UserDetails = store.get('user');
-        console.log("Brajesh Kumar");
-        console.log(store.get('user'));
 
         if($rootScope.UserDetails === undefined || $rootScope.UserDetails === null){return (false);}
         return ($rootScope.UserDetails.isLogin);
@@ -435,16 +893,510 @@ objIG.controller('MenuCtrl',['$scope', '$rootScope','store', function($scope, $r
     }
 
 }]);
-},{"../App.js":1}],10:[function(require,module,exports){
+},{"../App.js":1}],19:[function(require,module,exports){
+
+var objIG = require("../App.js");
+
+objIG.controller('UserCtrl',['$scope', '$sce',  function($scope, $sce) {
+    
+}]);
+},{"../App.js":1}],20:[function(require,module,exports){
 
 
-},{}],11:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 
-},{}],12:[function(require,module,exports){
-arguments[4][11][0].apply(exports,arguments)
-},{"dup":11}],13:[function(require,module,exports){
-arguments[4][11][0].apply(exports,arguments)
-},{"dup":11}],14:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
+arguments[4][21][0].apply(exports,arguments)
+},{"dup":21}],23:[function(require,module,exports){
+arguments[4][21][0].apply(exports,arguments)
+},{"dup":21}],24:[function(require,module,exports){
+var objIG = require("../App.js");
+
+objIG.directive('paging', function ($rootScope) {
+
+
+    /**
+     * The regex expression to use for any replace methods
+     * Feel free to tweak / fork values for your application
+     */
+    var regex = /\{page\}/g;
+    
+
+    /**
+     * The angular return value required for the directive
+     * Feel free to tweak / fork values for your application
+     */
+    return {
+
+        // Restrict to elements and attributes
+        restrict: 'EA',
+
+        // Assign the angular link function
+        link: fieldLink,
+        
+        // Assign the angular directive template HTML
+        template: fieldTemplate,
+
+        // Assign the angular scope attribute formatting
+        scope: {
+            page: '=',
+            pageSize: '=',
+            total: '=',
+            dots: '@',
+            ulClass: '@',
+            activeClass: '@',
+            disabledClass: '@',
+            adjacent: '@',
+            pagingAction: '&',
+            pgHref: '@',
+            textFirst: '@',
+            textLast: '@',
+            textNext: '@',
+            textPrev: '@',
+            textFirstClass: '@',
+            textLastClass: '@',
+            textNextClass: '@',
+            textPrevClass: '@',
+            textTitlePage: '@',
+            textTitleFirst: '@',
+            textTitleLast: '@',
+            textTitleNext: '@',
+            textTitlePrev: '@'
+        }
+                    
+    };
+
+
+    /**
+     * Link the directive to enable our scope watch values
+     *
+     * @param {object} scope - Angular link scope
+     * @param {object} el - Angular link element
+     * @param {object} attrs - Angular link attribute
+     */
+    function fieldLink(scope, el, attrs) {
+
+        // Hook in our watched items
+        scope.$watchCollection('[page,pageSize,total]', function () {
+            build(scope, attrs);
+        });
+    }
+    
+    
+    /**
+     * Create our template html 
+     * We use a function to figure out how to handle href correctly
+     * 
+     * @param {object} el - Angular link element
+     * @param {object} attrs - Angular link attribute
+     */
+    function fieldTemplate(el, attrs){
+            return '<ul data-ng-hide="Hide" data-ng-class="ulClass"> ' +
+                '<li ' +
+                    'title="{{Item.title}}" ' +
+                    'data-ng-class="Item.liClass" ' +
+                    'data-ng-repeat="Item in List"> ' +
+                        '<a ' + 
+                            (attrs.pgHref ? 'data-ng-href="{{Item.pgHref}}" ' : 'href ') +
+                            'data-ng-class="Item.aClass" ' +
+                            'data-ng-click="Item.action()" ' +
+                            'data-ng-bind="Item.value">'+ 
+                        '</a> ' +
+                '</li>' +
+            '</ul>' 
+    }
+
+
+    /**
+     * Assign default scope values from settings
+     * Feel free to tweak / fork these for your application
+     *
+     * @param {Object} scope - The local directive scope object
+     * @param {Object} attrs - The local directive attribute object
+     */
+    function setScopeValues(scope, attrs) {
+
+        scope.List = [];
+        scope.Hide = false;
+        
+        scope.page = parseInt(scope.page) || 1;
+        scope.total = parseInt(scope.total) || 0;
+        scope.adjacent = parseInt(scope.adjacent) || 2;
+
+        scope.pgHref = scope.pgHref || '';
+        scope.dots = scope.dots || '...';
+        
+        scope.ulClass = scope.ulClass || 'pagination';
+        scope.activeClass = scope.activeClass || 'active';
+        scope.disabledClass = scope.disabledClass || 'disabled';
+
+        scope.textFirst = scope.textFirst || '<<';
+        scope.textLast = scope.textLast || '>>';
+        scope.textNext = scope.textNext || '>';
+        scope.textPrev = scope.textPrev || '<';
+        
+        scope.textFirstClass = scope.textFirstClass || '';
+        scope.textLastClass= scope.textLastClass || '';
+        scope.textNextClass = scope.textNextClass || '';
+        scope.textPrevClass = scope.textPrevClass || '';
+
+        scope.textTitlePage = scope.textTitlePage || 'Page {page}';
+        scope.textTitleFirst = scope.textTitleFirst || 'First Page'; 
+        scope.textTitleLast = scope.textTitleLast || 'Last Page'; 
+        scope.textTitleNext = scope.textTitleNext || 'Next Page'; 
+        scope.textTitlePrev = scope.textTitlePrev || 'Previous Page'; 
+
+        scope.hideIfEmpty = evalBoolAttribute(scope, attrs.hideIfEmpty);
+        scope.showPrevNext = evalBoolAttribute(scope, attrs.showPrevNext);
+        scope.showFirstLast = evalBoolAttribute(scope, attrs.showFirstLast);
+        scope.scrollTop = evalBoolAttribute(scope, attrs.scrollTop)
+    }
+
+
+    /**
+     * A helper to perform our boolean eval on attributes
+     * This allows flexibility in the attribute for strings and variables in scope
+     * 
+     * @param {Object} scope - The local directive scope object
+     * @param {Object} value - The attribute value of interest
+     */
+    function evalBoolAttribute(scope, value){
+        return angular.isDefined(value)
+            ? !!scope.$parent.$eval(value)
+            : false;
+    }
+
+
+    /**
+     * Validate and clean up any scope values
+     * This happens after we have set the scope values
+     *
+     * @param {Object} scope - The local directive scope object
+     * @param {int} pageCount - The last page number or total page count
+     */
+    function validateScopeValues(scope, pageCount) {
+
+        // Block where the page is larger than the pageCount
+        if (scope.page > pageCount) {
+            scope.page = pageCount;
+        }
+
+        // Block where the page is less than 0
+        if (scope.page <= 0) {
+            scope.page = 1;
+        }
+
+        // Block where adjacent value is 0 or below
+        if (scope.adjacent <= 0) {
+            scope.adjacent = 2;
+        }
+
+        // Hide from page if we have 1 or less pages
+        // if directed to hide empty
+        if (pageCount <= 1) {
+            scope.Hide = scope.hideIfEmpty;
+        }
+    }
+
+
+    /**
+     * Assign the method action to take when a page is clicked
+     *
+     * @param {Object} scope - The local directive scope object
+     * @param {int} page - The current page of interest
+     */
+    function internalAction(scope, page) {
+        
+        // Block clicks we try to load the active page
+        if (scope.page == page) {
+            return;
+        }
+
+        // Update the page in scope
+        scope.page = page;
+        $rootScope.currentPage = page;
+
+        // Pass our parameters to the paging action
+        scope.pagingAction({
+            page: scope.page,
+            pageSize: scope.pageSize,
+            total: scope.total
+        });
+
+        // If allowed scroll up to the top of the page
+        if (scope.scrollTop) {
+            scrollTo(0, 0);
+        }
+    }
+
+
+    /**
+     * Add the first, previous, next, and last buttons if desired
+     * The logic is defined by the mode of interest
+     * This method will simply return if the scope.showPrevNext is false
+     * This method will simply return if there are no pages to display
+     *
+     * @param {Object} scope - The local directive scope object
+     * @param {int} pageCount - The last page number or total page count
+     * @param {string} mode - The mode of interest either prev or last
+     */
+    function addPrevNext(scope, pageCount, mode) {
+
+        // Ignore if we are not showing
+        // or there are no pages to display
+        if ((!scope.showPrevNext && !scope.showFirstLast) || pageCount < 1) {
+            return;
+        }
+
+        // Local variables to help determine logic
+        var disabled, alpha, beta;
+
+        // Determine logic based on the mode of interest
+        // Calculate the previous / next page and if the click actions are allowed
+        if (mode === 'prev') {
+
+            disabled = scope.page - 1 <= 0;
+            var prevPage = scope.page - 1 <= 0 ? 1 : scope.page - 1;
+
+            if(scope.showFirstLast){
+                alpha = {
+                    value: scope.textFirst,
+                    title: scope.textTitleFirst, 
+                    aClass: scope.textFirstClass,
+                    page: 1
+                };                
+            }
+
+            if(scope.showPrevNext){
+                beta = {
+                    value: scope.textPrev,
+                    title: scope.textTitlePrev, 
+                    aClass: scope.textPrevClass,
+                    page: prevPage
+                };    
+            }
+
+        } else {
+
+            disabled = scope.page + 1 > pageCount;
+            var nextPage = scope.page + 1 >= pageCount ? pageCount : scope.page + 1;
+
+            if(scope.showPrevNext){
+                alpha = {
+                    value: scope.textNext,
+                    title: scope.textTitleNext, 
+                    aClass: scope.textNextClass,
+                    page: nextPage
+                };    
+            }
+            
+            if(scope.showFirstLast){
+                beta = {
+                    value: scope.textLast,
+                    title: scope.textTitleLast, 
+                    aClass: scope.textLastClass,
+                    page: pageCount
+                };    
+            }
+            
+        }
+
+        // Create the Add Item Function
+        var buildItem = function (item, disabled) {
+            return {
+                value: item.aClass ? '' : item.value,
+                title: item.title,
+                liClass: disabled ? scope.disabledClass : '',
+                aClass: item.aClass,
+                pgHref: scope.pgHref.replace(regex, item.page),
+                action: function () {
+                    if (!disabled) {
+                        internalAction(scope, item.page);
+                    }
+                }
+            };    
+        };
+
+        // Add alpha items
+        if(alpha){
+            var alphaItem = buildItem(alpha, disabled);
+            scope.List.push(alphaItem);    
+        }
+        
+        // Add beta items
+        if(beta){
+            var betaItem = buildItem(beta, disabled);
+            scope.List.push(betaItem);    
+        }
+    }
+
+
+    /**
+     * Adds a range of numbers to our list
+     * The range is dependent on the start and finish parameters
+     *
+     * @param {int} start - The start of the range to add to the paging list
+     * @param {int} finish - The end of the range to add to the paging list
+     * @param {Object} scope - The local directive scope object
+     */
+    function addRange(start, finish, scope) {
+    
+        // Add our items where i is the page number
+        var i = 0;
+        for (i = start; i <= finish; i++) {
+            scope.List.push({
+                value: i,
+                title: scope.textTitlePage.replace(regex, i),
+                liClass: scope.page == i ? scope.activeClass : '',
+                pgHref: scope.pgHref.replace(regex, i),
+                action: function () {
+                    internalAction(scope, this.value);
+                }
+            });
+        }
+    }
+
+
+    /**
+     * Add Dots ie: 1 2 [...] 10 11 12 [...] 56 57
+     * This is my favorite function not going to lie
+     *
+     * @param {Object} scope - The local directive scope object
+     */
+    function addDots(scope) {
+        scope.List.push({
+            value: scope.dots,
+            liClass: scope.disabledClass
+        });
+    }
+
+
+    /**
+     * Add the first or beginning items in our paging list
+     * We leverage the 'next' parameter to determine if the dots are required
+     *
+     * @param {Object} scope - The local directive scope object
+     * @param {int} next - the next page number in the paging sequence
+     */
+    function addFirst(scope, next) {
+
+        addRange(1, 2, scope);
+
+        // We ignore dots if the next value is 3
+        // ie: 1 2 [...] 3 4 5 becomes just 1 2 3 4 5
+        if (next != 3) {
+            addDots(scope);
+        }
+    }
+
+
+    /**
+     * Add the last or end items in our paging list
+     * We leverage the 'prev' parameter to determine if the dots are required
+     *
+     * @param {int} pageCount - The last page number or total page count
+     * @param {Object} scope - The local directive scope object
+     * @param {int} prev - the previous page number in the paging sequence
+     */
+    // Add Last Pages
+    function addLast(pageCount, scope, prev) {
+
+        // We ignore dots if the previous value is one less that our start range
+        // ie: 1 2 3 4 [...] 5 6  becomes just 1 2 3 4 5 6
+        if (prev != pageCount - 2) {
+            addDots(scope);
+        }
+
+        addRange(pageCount - 1, pageCount, scope);
+    }
+
+
+
+    /**
+     * The main build function used to determine the paging logic
+     * Feel free to tweak / fork values for your application
+     *
+     * @param {Object} scope - The local directive scope object
+     * @param {Object} attrs - The local directive attribute object
+     */
+    function build(scope, attrs) {
+
+        // Block divide by 0 and empty page size
+        if (!scope.pageSize || scope.pageSize <= 0) {
+            scope.pageSize = 1;
+        }
+
+        // Determine the last page or total page count
+        var pageCount = Math.ceil(scope.total / scope.pageSize);
+
+        // Set the default scope values where needed
+        setScopeValues(scope, attrs);
+
+        // Validate the scope values to protect against strange states
+        validateScopeValues(scope, pageCount);
+
+        // Create the beginning and end page values
+        var start, finish;
+
+        // Calculate the full adjacency value
+        var fullAdjacentSize = (scope.adjacent * 2) + 2;
+
+
+        // Add the Next and Previous buttons to our list
+        addPrevNext(scope, pageCount, 'prev');
+
+        // If the page count is less than the full adjacnet size
+        // Then we simply display all the pages, Otherwise we calculate the proper paging display
+        if (pageCount <= (fullAdjacentSize + 2)) {
+
+            start = 1;
+            addRange(start, pageCount, scope);
+
+        } else {
+
+            // Determine if we are showing the beginning of the paging list
+            // We know it is the beginning if the page - adjacent is <= 2
+            if (scope.page - scope.adjacent <= 2) {
+
+                start = 1;
+                finish = 1 + fullAdjacentSize;
+
+                addRange(start, finish, scope);
+                addLast(pageCount, scope, finish);
+            }
+
+            // Determine if we are showing the middle of the paging list
+            // We know we are either in the middle or at the end since the beginning is ruled out above
+            // So we simply check if we are not at the end
+            // Again 2 is hard coded as we always display two pages after the dots
+            else if (scope.page < pageCount - (scope.adjacent + 2)) {
+
+                start = scope.page - scope.adjacent;
+                finish = scope.page + scope.adjacent;
+
+                addFirst(scope, start);
+                addRange(start, finish, scope);
+                addLast(pageCount, scope, finish);
+            }
+
+            // If nothing else we conclude we are at the end of the paging list
+            // We know this since we have already ruled out the beginning and middle above
+            else {
+
+                start = pageCount - fullAdjacentSize;
+                finish = pageCount;
+
+                addFirst(scope, start);
+                addRange(start, finish, scope);
+            }
+        }
+
+        // Add the next and last buttons to our paging list
+        addPrevNext(scope, pageCount, 'next');
+    }
+
+});
+},{"../App.js":1}],25:[function(require,module,exports){
 
 var objIG = require("../App.js");
 
@@ -478,9 +1430,94 @@ objIG.directive("menuItem", function() {
 });
 
 
-},{"../App.js":1}],15:[function(require,module,exports){
-arguments[4][11][0].apply(exports,arguments)
-},{"dup":11}],16:[function(require,module,exports){
+},{"../App.js":1}],26:[function(require,module,exports){
+//.directive('script', function($parse, $rootScope, $compile) {
+//    return {
+//        restrict: 'E',
+//        terminal: true,
+//        link: function(scope, element, attr) {
+//            if (attr.ngSrc) {
+//                 var domElem = '<script src="'+attr.ngSrc+'" async defer></script>';
+//                 $(element).append($compile(domElem)(scope));
+//
+//
+//            }
+//        }
+//};
+//    
+//.directive('script', function() {
+//    return {
+//      restrict: 'E',
+//      scope: false,
+//      link: function(scope, elem, attr) {
+//        if (attr.type === 'text/javascript-lazy') {
+//          var code = elem.text();
+//          var f = new Function(code);
+//          f();
+//        }
+//      }
+//    };
+//});
+},{}],27:[function(require,module,exports){
+
+var objIG = require("../App.js");
+
+
+
+objIG.factory('AuthFactory',['$firebaseAuth',  function($firebaseAuth) {
+    
+    var ref = new Firebase ("https://boiling-torch-5353.firebaseio.com/");
+    return $firebaseAuth(ref);
+    
+}]);
+},{"../App.js":1}],28:[function(require,module,exports){
+var Promise = require('es6-promise').Promise;
+var IGUrl = require("../configs/IGUrl");
+var Constant = require("../configs/Constant");
+
+var HttpRequest = {
+
+	//prepareURL: function (customURL) {
+	//	var url = customURL.replace('+', '/').replace('+', '/').replace('+', '/').replace('+', '/');
+	//	return url;
+	//},
+	//
+	//request: function(method, methodName, params, headers, resolve, reject) {
+	//	var self = this;
+	//	var url = IGUrl.DOMAIN;
+	//	if ((url.substring(0, 4) == "http") || (url.substring(0, 4) == "https")) {
+	//		url = self.prepareURL(url + methodName + params);
+	//	} else {
+	//		url = self.prepareURL(IGUrl.PROTOCOL + url + methodName + params);
+	//	}
+	//	return url;
+	//},
+
+	get: function (url) {
+		$http.get(url)
+			.then(function(res){
+				console.log(res);
+				//$scope.courseDetails = res.data.courseDetails;
+				//$scope.GlobalcourseDetails = res.data.courseDetails;
+		});
+	},
+
+};
+
+module.exports = HttpRequest;
+},{"../configs/Constant":3,"../configs/IGUrl":4,"es6-promise":38}],29:[function(require,module,exports){
+arguments[4][28][0].apply(exports,arguments)
+},{"../configs/Constant":3,"../configs/IGUrl":4,"dup":28,"es6-promise":38}],30:[function(require,module,exports){
+arguments[4][21][0].apply(exports,arguments)
+},{"dup":21}],31:[function(require,module,exports){
+arguments[4][21][0].apply(exports,arguments)
+},{"dup":21}],32:[function(require,module,exports){
+arguments[4][21][0].apply(exports,arguments)
+},{"dup":21}],33:[function(require,module,exports){
+arguments[4][21][0].apply(exports,arguments)
+},{"dup":21}],34:[function(require,module,exports){
+arguments[4][21][0].apply(exports,arguments)
+},{"dup":21}],35:[function(require,module,exports){
 (function(window, angular, undefined) {
 
   'use strict';
@@ -702,7 +1739,7 @@ arguments[4][11][0].apply(exports,arguments)
 
 })(window, window.angular);
 
-},{}],17:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 /*!
  * Name: angular-carousel-3d
  * GIT Page: https://github.com/Wlada/angular-carousel-3d
@@ -1407,10 +2444,10 @@ arguments[4][11][0].apply(exports,arguments)
         return ( Carousel3d );
     }
 })();
-},{}],18:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 /* PDFObject, copyright (C) 2008 Philip Hutchison (pipwerks.com). Documentation and examples are at www.pdfobject.com. Version 1.2, April 2011. MIT style license */
 var PDFObject=function(y){if(!y||!y.url){return false;}var w="1.2",b=y.id||false,i=y.width||"100%",z=y.height||"100%",r=y.pdfOpenParams,a,x;var v=function(){var c=null;if(window.ActiveXObject){c=new ActiveXObject("AcroPDF.PDF");if(!c){c=new ActiveXObject("PDF.PdfCtrl");}if(c!==null){return true;}}return false;};var u=function(){var c,f=navigator.plugins,d=f.length,e=/Adobe Reader|Adobe PDF|Acrobat/gi;for(c=0;c<d;c++){if(e.test(f[c].name)){return true;}}return false;};var t=function(){var c=navigator.mimeTypes["application/pdf"];return(c&&c.enabledPlugin);};var s=function(){var c=null;if(u()||v()){c="Adobe";}else{if(t()){c="generic";}}return c;};var q=function(){var e=document.getElementsByTagName("html");if(!e){return false;}var c=e[0].style,d=document.body.style;c.height="100%";c.overflow="hidden";d.margin="0";d.padding="0";d.height="100%";d.overflow="hidden";};var p=function(d){var c="",e;if(!d){return c;}for(e in d){if(d.hasOwnProperty(e)){c+=e+"=";if(e==="search"){c+=encodeURI(d[e]);}else{c+=d[e];}c+="&";}}return c.slice(0,c.length-1);};var o=function(d){var c=null;switch(d){case"url":c=a;break;case"id":c=b;break;case"width":c=i;break;case"height":c=z;break;case"pdfOpenParams":c=r;break;case"pluginTypeFound":c=x;break;case"pdfobjectversion":c=w;break;}return c;};var n=function(d){if(!x){return false;}var c=null;if(d){c=(d.nodeType&&d.nodeType===1)?d:document.getElementById(d);if(!c){return false;}}else{c=document.body;q();i="100%";z="100%";}c.innerHTML='<object	data="'+a+'" type="application/pdf" width="'+i+'" height="'+z+'"></object>';return c.getElementsByTagName("object")[0];};a=encodeURI(y.url)+"#"+p(r);x=s();this.get=function(c){return o(c);};this.embed=function(c){return n(c);};return this;};
-},{}],19:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 (function (process,global){
 /*!
  * @overview es6-promise - a tiny implementation of Promises/A+.
@@ -2368,7 +3405,7 @@ var PDFObject=function(y){if(!y||!y.url){return false;}var w="1.2",b=y.id||false
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":20}],20:[function(require,module,exports){
+},{"_process":39}],39:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -2461,4 +3498,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]);
+},{}]},{},[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,30,31,32,33,34,35,36,37]);

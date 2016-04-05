@@ -9,7 +9,7 @@
 	background-attachment: fixed;
 	background-position: top 47% right 75%;
 	background-size: cover;
-	background-image: url(../../contents/images//login-background.jpg);
+	background-image: url(../../contents/images/login-background.jpg);
 }
 
 .loginSection {
@@ -30,7 +30,7 @@
 	box-shadow: 0 0 80px rgba(0,0,0,.8);
 	float: right!important;
 	height: 100%;
-	min-width: 300px;
+	min-width: 40%;
 	min-height: 500px;
 }
 

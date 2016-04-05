@@ -55,6 +55,7 @@
 	bottom: 0;
 	width: 100%;
 	height: 38px;
+	background-color: lightgray;
 }
 .footer > .container {
 	padding-right: 15px;
@@ -110,6 +111,12 @@ a {
 
 ul.social-icons li.twitter {
 	background-position: 0 -1140px;
+}
+
+.footer-text {
+	padding-top: 8px;
+	color: #3a5795;
+	font-weight: bold;
 }
 
 
