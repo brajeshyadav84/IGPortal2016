@@ -2,7 +2,7 @@
 	max-width: 263px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 5px 5px 45px 5px;
+/*	padding: 5px 5px 45px 5px;*/
 }
 .cardOuterBox header {
 	position: relative;
@@ -69,4 +69,14 @@
 	max-width: 263px;
 	width: 100%;
 	margin: 0 auto;
+}
+
+.chatCardOuterBox{
+	max-width: 263px;
+    height: 200px;
+	width: 100%;
+	margin: 0 auto;
+/*	padding: 5px 5px 45px 5px;*/
+    background-color: yellow;
+    margin-bottom: 20px;
 }
