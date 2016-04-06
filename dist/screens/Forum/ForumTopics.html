@@ -1,12 +1,4 @@
 <div ng-controller="ForumController" class="IG_OuterContentLayout">
-	<div style="height: 20px;">
-		<div class="IG_right">
-            <md-button class="md-primary" target="_blank" ng-click="toggle = !toggle">Add Topics</md-button>
-            <md-button class="md-primary" target="_blank" ng-click="setRedirect('ManageForum')">Manage Forum</md-button>
-        </div>
-	</div>
-	<br />
-	
 	<md-subheader class="md-no-sticky">
         <div ng-include="'screens/component/Pagination.html'" style="text-align: right;"></div>
     </md-subheader>
@@ -38,6 +30,6 @@
 		</div>
       </md-list-item>
     
-    <div ng-include="'screens/component/Editor.html'" ng-show=toggle></div>
+    <div ng-include="'screens/component/Editor.html'"></div>
     
 </div>

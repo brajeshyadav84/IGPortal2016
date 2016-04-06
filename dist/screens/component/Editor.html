@@ -9,23 +9,19 @@
     }
 </style>
 
-<md-bottom-sheet class="md-list md-has-header" ng-cloak>
-  <md-list>
-    <div class="row">
-            <div class="col-sm-12">
+<div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #F3F0F0;">
                 <md-input-container class="md-block">
                   <label>Title</label>
                   <input required md-no-asterisk name="TopicTitle" ng-model="Forum.TopicTitle">
                 </md-input-container>
-            </div>
-			<div class="col-sm-12">
+                
                 <label>Description</label>
-				<div text-angular ng-model="htmlContent" name="demo-editor" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+				<div text-angular ng-model="htmlContent" name="demo-editor" ta-text-editor-class="border-around" ta-html-editor-class="border-around" style="border: 1px solid grey;"></div>
                 <div class="IG_right">
                     <md-button class="md-primary" target="_blank">Cancel</md-button>
                     <md-button class="md-raised md-primary">Submit</md-button>
                 </div>
 			</div>
+            
     </div>
-  </md-list>
-</md-bottom-sheet>
