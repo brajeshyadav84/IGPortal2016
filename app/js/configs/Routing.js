@@ -144,6 +144,12 @@ objIG.config(function($routeProvider,$locationProvider,$logProvider){
 			controller:'',
 	
 		}).
+    when('/DeveloperTalk/:Id',
+		{
+			templateUrl:"screens/component/DeveloperTalk.html",
+			controller:'',
+	
+		}).
     when('/ProjectList',
 		{
 			templateUrl:"screens/endUser/ProjectIdea.html",
