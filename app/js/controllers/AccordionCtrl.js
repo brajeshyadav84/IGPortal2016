@@ -1,6 +1,6 @@
 var objIG = require("../App.js");
 
-objIG.controller('AccordionCtrl',function($scope,$location,$rootScope){
+objIG.controller('AccordionCtrl',['$scope','$location','$rootScope', function($scope,$location,$rootScope){
 
 	$scope.panesA = [
         {
@@ -47,4 +47,4 @@ objIG.controller('AccordionCtrl',function($scope,$location,$rootScope){
         console.log('accordionA is ready!');
       });
 
-});
+}]);
