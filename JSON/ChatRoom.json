@@ -1,100 +1,93 @@
 {"ChatRoom": [
     {
         "Id": "CR01",
-        "header": "AngularJS",
-        "content" : "AngularJS, commonly referred to as Angular, is an open-source web application framework maintained by Google and a community of individual developers.",
-        "url": "https://gitter.im/brajeshyadav84/AngularJS-ChatRoom",
-        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
-    },
-    {
-        "Id": "CR02",
-        "header": "ReactJS",
-        "content" : "ReactJS,",
-        "url":"https://gitter.im/brajeshyadav84/ReactJS-ChatRoom",
-        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
-    },
-    {
-        "Id": "CR03",
-        "header": "DotNet",
-        "content" : "DotNet,",
-        "url": "https://gitter.im/brajeshyadav84/DotNet-ChatRoom",
-        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
-    },
-    {
-        "Id": "CR04",
-        "header": "MVC",
-        "content" : "MVC,",
-        "url":"https://gitter.im/brajeshyadav84/MVC-ChatRoom",
-        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
-    },
-    {
-        "Id": "CR05",
         "header": "JavaScript",
-        "content" : "JavaScript",
+        "content" : "JavaScript is a high-level, dynamic, untyped, and interpreted programming language. based on the ECMAScript.",
         "url": "https://gitter.im/brajeshyadav84/Javascript-ChatRoom",
         "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
     },
     {
-        "Id": "CR06",
-        "header": "CSS",
-        "content" : "CSS,",
+        "Id": "CR02",
+        "header": "AngularJS",
+        "content" : "AngularJS is an open-source web application framework.",
+        "url": "https://gitter.im/brajeshyadav84/AngularJS-ChatRoom",
+        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
+    },
+    {
+        "Id": "CR03",
+        "header": "ReactJS",
+        "content" : "React is an open-source JavaScript library providing a view for data rendered as HTML.",
+        "url":"https://gitter.im/brajeshyadav84/ReactJS-ChatRoom",
+        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
+    },
+    {
+        "Id": "CR04",
+        "header": "NodeJS",
+        "content" : "NodeJS is an open-source, cross-platform runtime environment for developing server-side Web applications.",
+        "url":"https://gitter.im/brajeshyadav84/NodeJS-ChatRoom",
+        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
+    },
+    {
+        "Id": "CR05",
+        "header": "CSS, SASS, LESS",
+        "content" : "CSS is a style sheet language used for describing the presentation of a document written in a markup language.",
         "url":"https://gitter.im/brajeshyadav84/CSS-ChatRoom",
         "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
     },
     {
+        "Id": "CR06",
+        "header": "NET Framework",
+        "content" : "NET Framework (pronounced dot net) is a software framework developed by Microsoft that runs primarily on Microsoft Windows.",
+        "url": "https://gitter.im/brajeshyadav84/DotNet-ChatRoom",
+        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
+    },
+    {
         "Id": "CR07",
-        "header": "Java",
-        "content" : "Java",
-        "url": "https://gitter.im/brajeshyadav84/Java-ChatRoom",
+        "header": "MVC",
+        "content" : "Model–view–controller (MVC) is a software architectural pattern for implementing user interfaces on computers.",
+        "url":"https://gitter.im/brajeshyadav84/MVC-ChatRoom",
         "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
     },
     {
         "Id": "CR08",
-        "header": "NodeJS",
-        "content" : "NodeJS,",
-        "url":"https://gitter.im/brajeshyadav84/NodeJS-ChatRoom",
+        "header": "Java",
+        "content" : "Java is a class-based, object-oriented and specifically designed to have as few implementation dependencies as possible.",
+        "url": "https://gitter.im/brajeshyadav84/Java-ChatRoom",
         "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
     },
     {
         "Id": "CR09",
-        "header": "JobReference",
-        "content" : "JobReference",
-        "url": "https://gitter.im/brajeshyadav84/JobReference-ChatRoom",
-        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
-    },
-    {
-        "Id": "CR10",
-        "header": "NodeJS",
-        "content" : "NodeJS,",
-        "url":"https://gitter.im/brajeshyadav84/NodeJS-ChatRoom",
-        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
-    },
-    {
-        "Id": "CR11",
-        "header": "HrPrepration",
-        "content" : "HrPrepration",
-        "url": "https://gitter.im/brajeshyadav84/HrPrepration-ChatRoom",
-        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
-    },
-    {
-        "Id": "CR12",
         "header": "TESTING",
-        "content" : "TESTING,",
+        "content" : "Software testing is an investigation conducted to provide stakeholders with information about the quality of the product or service under test.",
         "url":"https://gitter.im/brajeshyadav84/Testing-ChatRoom",
         "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
     },
     {
-        "Id": "CR13",
+        "Id": "CR10",
         "header": "Android",
-        "content" : "Android,",
+        "content" : "Android is a mobile (OS) currently developed by Google, based on the Linux kernel and designed primarily for touchscreen mobile devices.",
         "url":"https://gitter.im/brajeshyadav84/Android-ChatRoom",
         "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
     },
     {
-        "Id": "CR14",
+        "Id": "CR11",
         "header": "IOS",
-        "content" : "IOS,",
+        "content" : "OS (originally iPhone OS) is a mobile (OS) created and developed by Apple Inc. and distributed exclusively for Apple hardware.",
         "url":"https://gitter.im/brajeshyadav84/IOS-ChatRoom",
+        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
+    },
+    {
+        "Id": "CR12",
+        "header": "HrPrepration",
+        "content" : "HR Interview Preparation Guidelines",
+        "url": "https://gitter.im/brajeshyadav84/HrPrepration-ChatRoom",
+        "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
+    },
+    {
+        "Id": "CR13",
+        "header": "JobReference",
+        "content" : "Job Related Information",
+        "url": "https://gitter.im/brajeshyadav84/JobReference-ChatRoom",
         "imageUrl": "contents/images/ChatRoom/circle-hangout-video.png"
     }
 
