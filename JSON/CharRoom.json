@@ -1,0 +1,87 @@
+{"ChatRoom": [
+    {
+        "Id": "CR01",
+        "header": "AngularJS",
+        "content" : "AngularJS, commonly referred to as Angular, is an open-source web application framework maintained by Google and a community of individual developers.",
+        "url": "https://gitter.im/brajeshyadav84/AngularJS-ChatRoom"
+    },
+    {
+        "Id": "CR02",
+        "header": "ReactJS",
+        "content" : "ReactJS,",
+        "url":"https://gitter.im/brajeshyadav84/ReactJS-ChatRoom"
+    },
+    {
+        "Id": "CR03",
+        "header": "DotNet",
+        "content" : "DotNet,",
+        "url": "https://gitter.im/brajeshyadav84/DotNet-ChatRoom"
+    },
+    {
+        "Id": "CR04",
+        "header": "MVC",
+        "content" : "MVC,",
+        "url":"https://gitter.im/brajeshyadav84/MVC-ChatRoom"
+    },
+    {
+        "Id": "CR05",
+        "header": "JavaScript",
+        "content" : "JavaScript",
+        "url": "https://gitter.im/brajeshyadav84/Javascript-ChatRoom"
+    },
+    {
+        "Id": "CR06",
+        "header": "CSS",
+        "content" : "CSS,",
+        "url":"https://gitter.im/brajeshyadav84/CSS-ChatRoom"
+    },
+    {
+        "Id": "CR07",
+        "header": "Java",
+        "content" : "Java",
+        "url": "https://gitter.im/brajeshyadav84/Java-ChatRoom"
+    },
+    {
+        "Id": "CR08",
+        "header": "NodeJS",
+        "content" : "NodeJS,",
+        "url":"https://gitter.im/brajeshyadav84/NodeJS-ChatRoom"
+    },
+    {
+        "Id": "CR09",
+        "header": "JobReference",
+        "content" : "JobReference",
+        "url": "https://gitter.im/brajeshyadav84/JobReference-ChatRoom"
+    },
+    {
+        "Id": "CR10",
+        "header": "NodeJS",
+        "content" : "NodeJS,",
+        "url":"https://gitter.im/brajeshyadav84/NodeJS-ChatRoom"
+    },
+    {
+        "Id": "CR11",
+        "header": "HrPrepration",
+        "content" : "HrPrepration",
+        "url": "https://gitter.im/brajeshyadav84/HrPrepration-ChatRoom"
+    },
+    {
+        "Id": "CR12",
+        "header": "TESTING",
+        "content" : "TESTING,",
+        "url":"https://gitter.im/brajeshyadav84/Testing-ChatRoom"
+    },
+    {
+        "Id": "CR13",
+        "header": "Android",
+        "content" : "Android,",
+        "url":"https://gitter.im/brajeshyadav84/Android-ChatRoom"
+    },
+    {
+        "Id": "CR14",
+        "header": "IOS",
+        "content" : "IOS,",
+        "url":"https://gitter.im/brajeshyadav84/IOS-ChatRoom"
+    }
+
+]}
