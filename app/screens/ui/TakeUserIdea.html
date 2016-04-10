@@ -35,8 +35,16 @@
 					</md-input-container>
 			</md-content>
     </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <md-content layout-padding>
+					<md-input-container class="md-block">
+						<label>How Different from Others?</label>
+						<textarea md-maxlength="1000" required name="Description" ng-model="project.Description" col="3" row="3"></textarea>
+					</md-input-container>
+			</md-content>
+    </div>
     
-    <div ng-include="'screens/component/FileUploader.html'"></div>
+    <div style="padding-left: 25px;" ng-include="'screens/component/FileUploader.html'"></div>
     
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="IG_center">
