@@ -21,9 +21,9 @@
             {"Id": "IG01_12", "label": "Caching & Security"},
             {"Id": "IG01_13", "label": "Localization"}
         ],
-        "isVideo":"",
+        "isVideo":"true",
         "isTutorial":"",
-        "idForum":""
+        "idForum":"true"
     },
     {
         "title": "MongoDB",
@@ -45,7 +45,7 @@
             {"Id": "IG02_10", "label": "Administration"}
         ],
         "isVideo":"",
-        "isTutorial":"",
+        "isTutorial":"true",
         "idForum":""
     },
     {

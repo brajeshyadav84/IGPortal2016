@@ -13,9 +13,9 @@
 				<div ng-bind="slide.shortDesc" class="text"></div>
 			</div>
 			<div class="carouselLink">
-				<i class="glyphicon glyphicon-file" style="cursor: pointer;" ng-click="setRedirect('Course/'+slide.Id+'/file')"></i>&nbsp;&nbsp;
-				<i class="glyphicon glyphicon-film" style="cursor: pointer;" ng-click="setRedirect('Course/'+slide.Id+'/video')"></i>&nbsp;&nbsp;
-				<i class="glyphicon glyphicon-share" style="cursor: pointer;" ng-click="setRedirect('Course/'+slide.Id+'/articles')"></i>
+				<i ng-show="slide.isTutorial" class="glyphicon glyphicon-file" style="cursor: pointer;" ng-click="setRedirect('Course/'+slide.Id+'/file')"></i>&nbsp;&nbsp;
+				<i ng-show="slide.isVideo" class="glyphicon glyphicon-film" style="cursor: pointer;" ng-click="setRedirect('Course/'+slide.Id+'/video')"></i>&nbsp;&nbsp;
+				<i ng-show="slide.idForum" class="glyphicon glyphicon-share" style="cursor: pointer;" ng-click="setRedirect('Course/'+slide.Id+'/articles')"></i>
 			</div>
 		</carousel3d-slide>
 
